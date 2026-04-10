@@ -1,20 +1,29 @@
-
 # 🛡️ Lisa Marie Moreno | SOC Analyst
-> Blue Team Operations | Threat Detection | Incident Response
+> **Blue Team Operations | Threat Detection | Incident Response**
 
-Portafolio profesional trilingüe construido con estética de terminal.
+Portafolio profesional trilingüe construido con estética de terminal para destacar laboratorios técnicos y análisis de ciberseguridad.
 
-🔗 **Sitio Web:** [lisamorenoit.github.io](https://lisamorenoit.github.io)
-
-## 🛠️ Perfil Técnico
-- [cite_start]**Experiencia SOC:** Monitoreo en tiempo real, investigación de incidentes de bajo/medio nivel y escalado de amenazas críticas. [cite: 32, 33, 34]
-- [cite_start]**Análisis de Datos:** Extracción SQL y visualización en Google Data Studio. [cite: 11, 20]
-- [cite_start]**Habilidades:** SIEM (Splunk/Wazuh), MITRE ATT&CK, Análisis de Logs, OSINT y Malware Analysis. [cite: 14, 15, 16, 23]
-
-## 🏆 Logros Destacados
-- [cite_start]**2° Lugar CTF OAS Cyberchallenge** (Internacional - Colombia). [cite: 55, 56]
-- [cite_start]**3° Lugar CTF Nacional** (Rep. Dominicana). [cite: 58]
-- [cite_start]**Proyecto Ganador** Bootcamp Desarrollo Web Full Stack (2025). [cite: 60]
+🔗 **Sitio Web:** [https://lisamorenoit.github.io](https://lisamorenoit.github.io)
 
 ---
-[cite_start]*Contacto: finanzasmoreno24@gmail.com* [cite: 6]
+
+## 🛠️ Perfil Técnico
+
+* **Experiencia SOC:** Monitoreo en tiempo real, investigación de incidentes de bajo/medio nivel y escalado de amenazas críticas.
+* **Análisis de Datos:** Extracción SQL y visualización avanzada en Google Data Studio.
+* **Habilidades:** SIEM (Splunk/Wazuh), Framework MITRE ATT&CK, Análisis de Logs, OSINT y Malware Analysis.
+
+## 🏆 Logros Destacados
+
+* **2° Lugar CTF OAS Cyberchallenge** (Internacional - Cartagena, Colombia).
+* **3° Lugar CTF Nacional** (República Dominicana).
+* **Proyecto Ganador** Bootcamp Desarrollo Web Full Stack (2025).
+
+---
+
+## 📬 Contacto
+📧 **Email:** [finanzasmoreno24@gmail.com](mailto:finanzasmoreno24@gmail.com)  
+💼 **LinkedIn:** [lisa-marie-moreno](https://linkedin.com/in/lisa-marie-moreno)
+
+---
+*© 2026 - Construido con fines profesionales para el sector de Ciberseguridad.*
