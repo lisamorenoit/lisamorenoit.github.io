@@ -22,7 +22,7 @@ Portafolio profesional trilingüe construido con estética de terminal para dest
 ---
 
 ## 📬 Contacto
-📧 **Email:** [finanzasmoreno24@gmail.com](mailto:finanzasmoreno24@gmail.com)  
+📧 **Email:** [lisamoreno.it@gmail.com](mailto:lisamoreno.it@gmail.com)  
 💼 **LinkedIn:** [lisa-marie-moreno](https://linkedin.com/in/lisa-marie-moreno)
 
 ---
