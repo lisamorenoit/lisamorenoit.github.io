@@ -3,32 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SOC Analyst · Cybersecurity Portfolio</title>
+<title>Lisa Marie Moreno · SOC Analyst</title>
+<meta name="description" content="Lisa Marie Moreno — Cybersecurity Analyst, SOC Analyst, Threat Intelligence. Portfolio of hands-on security projects.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg: #080b0f;
-  --bg2: #0d1117;
-  --bg3: #111820;
-  --border: rgba(255,255,255,0.07);
-  --border2: rgba(255,255,255,0.13);
-  --green: #00e5a0;
-  --green-dim: rgba(0,229,160,0.12);
-  --red: #ff4c6a;
-  --red-dim: rgba(255,76,106,0.1);
-  --amber: #ffb84d;
-  --amber-dim: rgba(255,184,77,0.1);
-  --blue: #5b9cf6;
-  --blue-dim: rgba(91,156,246,0.1);
-  --purple: #a78bfa;
-  --purple-dim: rgba(167,139,250,0.1);
-  --text: #e2e8f0;
-  --text2: #8892a4;
-  --text3: #4a5568;
-  --mono: 'DM Mono', monospace;
-  --serif: 'Fraunces', serif;
-}
+:root{--bg:#080b0f;--bg2:#0d1117;--bg3:#111820;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);--green:#00e5a0;--green-dim:rgba(0,229,160,0.12);--red:#ff4c6a;--red-dim:rgba(255,76,106,0.1);--amber:#ffb84d;--amber-dim:rgba(255,184,77,0.1);--blue:#5b9cf6;--blue-dim:rgba(91,156,246,0.1);--purple:#a78bfa;--purple-dim:rgba(167,139,250,0.1);--gold:#ffd700;--gold-dim:rgba(255,215,0,0.1);--text:#e2e8f0;--text2:#8892a4;--text3:#4a5568;--mono:'DM Mono',monospace;--serif:'Fraunces',serif}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:14px;line-height:1.7;overflow-x:hidden}
@@ -36,31 +16,43 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.025) 2px,rgba(0,0,0,.025) 4px);pointer-events:none;z-index:0}
 ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--green);border-radius:2px}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,11,15,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 clamp(20px,5vw,60px);display:flex;align-items:center;justify-content:space-between;height:56px}
+/* ── HR BANNER ── */
+#hr-banner{position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(0,229,160,.97);color:#080b0f;padding:14px 24px;display:none;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;font-family:var(--mono)}
+#hr-banner.show{display:flex}
+.hr-banner-text{font-weight:500;letter-spacing:.03em}
+.hr-banner-actions{display:flex;gap:10px;align-items:center}
+.hr-banner-btn{background:#080b0f;color:var(--green);border:none;padding:7px 18px;border-radius:5px;font-family:var(--mono);font-size:12px;font-weight:500;cursor:pointer;letter-spacing:.05em;text-decoration:none;display:inline-block;transition:opacity .2s}
+.hr-banner-btn:hover{opacity:.85}
+.hr-banner-close{background:transparent;border:none;color:#080b0f;cursor:pointer;font-size:18px;line-height:1;padding:0 4px;opacity:.6}
+.hr-banner-close:hover{opacity:1}
+
+/* ── VISITOR COUNTER ── */
+#visitor-bar{background:var(--bg3);border-bottom:1px solid var(--border);text-align:center;padding:7px;font-size:11px;color:var(--text3);letter-spacing:.06em;position:relative;z-index:99}
+#visitor-bar span{color:var(--green)}
+
+/* ── NAV ── */
+nav{position:fixed;top:33px;left:0;right:0;z-index:100;background:rgba(8,11,15,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 clamp(20px,5vw,60px);display:flex;align-items:center;justify-content:space-between;height:56px}
 .nav-logo{font-size:12px;color:var(--green);letter-spacing:.08em;text-decoration:none;display:flex;align-items:center;gap:8px}
 .nav-logo::before{content:'>';color:var(--text3);animation:blink 1.2s step-end infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
-.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-links{display:flex;align-items:center;gap:24px;list-style:none}
 .nav-links a{color:var(--text2);text-decoration:none;font-size:12px;letter-spacing:.06em;transition:color .2s}
 .nav-links a:hover{color:var(--green)}
-
-/* LANG */
 .lang-switcher{display:flex;gap:2px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:3px}
 .lang-btn{background:transparent;border:none;color:var(--text2);font-family:var(--mono);font-size:11px;letter-spacing:.08em;padding:4px 9px;border-radius:4px;cursor:pointer;transition:all .2s}
 .lang-btn:hover{color:var(--text)}
 .lang-btn.active{background:var(--green);color:#080b0f;font-weight:500}
 
-/* LAYOUT */
+/* ── LAYOUT ── */
 main{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
 
-/* HERO */
-#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:80px}
+/* ── HERO ── */
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:108px}
 .hero-eyebrow{font-size:11px;color:var(--green);letter-spacing:.2em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:12px}
 .hero-eyebrow::before{content:'';width:32px;height:1px;background:var(--green)}
-.hero-name{font-family:var(--serif);font-size:clamp(48px,9vw,96px);font-weight:300;line-height:.95;letter-spacing:-.02em;margin-bottom:24px;color:var(--text)}
+.hero-name{font-family:var(--serif);font-size:clamp(44px,8vw,88px);font-weight:300;line-height:.95;letter-spacing:-.02em;margin-bottom:24px;color:var(--text)}
 .hero-name span{color:var(--green);font-style:italic}
-.hero-title{font-size:13px;color:var(--text2);max-width:480px;line-height:1.8;margin-bottom:40px}
+.hero-title{font-size:13px;color:var(--text2);max-width:520px;line-height:1.8;margin-bottom:40px}
 .hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:48px}
 .badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;padding:5px 12px;border-radius:4px;letter-spacing:.05em}
 .bg{background:var(--green-dim);color:var(--green);border:1px solid rgba(0,229,160,.2)}
@@ -68,43 +60,62 @@ main{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:0 clamp(2
 .bb{background:var(--blue-dim);color:var(--blue);border:1px solid rgba(91,156,246,.2)}
 .ba{background:var(--amber-dim);color:var(--amber);border:1px solid rgba(255,184,77,.2)}
 .bp{background:var(--purple-dim);color:var(--purple);border:1px solid rgba(167,139,250,.2)}
+.bgold{background:var(--gold-dim);color:var(--gold);border:1px solid rgba(255,215,0,.2)}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
 .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#080b0f;text-decoration:none;font-size:12px;font-family:var(--mono);font-weight:500;letter-spacing:.06em;padding:11px 22px;border-radius:6px;transition:all .2s}
 .btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,229,160,.25)}
 .btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--text2);text-decoration:none;font-size:12px;font-family:var(--mono);letter-spacing:.06em;padding:11px 22px;border-radius:6px;border:1px solid var(--border2);transition:all .2s}
 .btn-secondary:hover{color:var(--text);border-color:var(--text2)}
 
-/* TERMINAL */
+/* ── TERMINAL ── */
 .terminal-prompt{margin-top:64px;background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden;max-width:560px}
 .terminal-bar{background:var(--bg3);padding:10px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border)}
 .dot{width:10px;height:10px;border-radius:50%}
 .dot-r{background:#ff5f57}.dot-y{background:#ffbd2e}.dot-g{background:#28ca41}
 .terminal-title{font-size:11px;color:var(--text3);margin-left:8px;letter-spacing:.05em}
 .terminal-body{padding:18px 20px;font-size:12px;line-height:2}
-.t-prompt{color:var(--green)}.t-cmd{color:var(--text)}.t-out{color:var(--text2)}.t-hl{color:var(--amber)}
+.t-p{color:var(--green)}.t-c{color:var(--text)}.t-o{color:var(--text2)}.t-hl{color:var(--amber)}
 .t-cursor{display:inline-block;width:7px;height:13px;background:var(--green);vertical-align:middle;animation:blink 1.2s step-end infinite}
 
-/* SECTIONS */
+/* ── SECTIONS ── */
 section{padding:96px 0}
 .section-label{font-size:10px;color:var(--green);letter-spacing:.25em;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:10px}
 .section-label::after{content:'';flex:1;height:1px;background:var(--border)}
 .section-title{font-family:var(--serif);font-size:clamp(28px,4vw,42px);font-weight:300;line-height:1.15;margin-bottom:48px;letter-spacing:-.01em}
 .section-title em{color:var(--green);font-style:italic}
 
-/* TIMELINE */
+/* ── AWARDS ── */
+.awards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-bottom:48px}
+.award-card{background:var(--bg2);border:1px solid rgba(255,215,0,.15);border-radius:12px;padding:20px;position:relative;overflow:hidden;transition:all .25s}
+.award-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
+.award-card:hover{border-color:rgba(255,215,0,.3);transform:translateY(-2px)}
+.award-place{font-size:22px;font-weight:700;font-family:var(--mono);margin-bottom:6px}
+.award-place.gold{color:var(--gold)}
+.award-place.silver{color:#c0c0c0}
+.award-place.bronze{color:#cd7f32}
+.award-place.winner{color:var(--green)}
+.award-title{font-size:13px;color:var(--text);font-weight:500;line-height:1.4;margin-bottom:6px}
+.award-desc{font-size:11px;color:var(--text2);line-height:1.6;margin-bottom:10px}
+.award-year{font-size:10px;color:var(--text3);letter-spacing:.1em}
+
+/* ── TIMELINE ── */
 .timeline{position:relative;padding-left:28px}
 .timeline::before{content:'';position:absolute;left:0;top:8px;bottom:0;width:1px;background:linear-gradient(var(--border2),transparent)}
 .tl-item{position:relative;padding-bottom:40px}
 .tl-item::before{content:'';position:absolute;left:-32px;top:7px;width:8px;height:8px;border-radius:50%;background:var(--bg);border:2px solid var(--border2);transition:border-color .2s}
 .tl-item.active::before{border-color:var(--green);background:var(--green)}
+.tl-item.edu::before{border-color:var(--blue);background:var(--blue)}
 .tl-date{font-size:11px;color:var(--text3);letter-spacing:.1em;margin-bottom:4px}
 .tl-role{font-size:15px;color:var(--text);font-weight:500;margin-bottom:4px}
 .tl-company{font-size:12px;color:var(--green);margin-bottom:8px}
+.tl-company.blue{color:var(--blue)}
 .tl-desc{font-size:12px;color:var(--text2);line-height:1.8;max-width:560px}
+.tl-desc ul{padding-left:16px;margin-top:6px}
+.tl-desc li{margin-bottom:4px}
 .tl-gap{background:var(--green-dim);border:1px solid rgba(0,229,160,.15);border-radius:8px;padding:14px 18px;margin-bottom:8px}
 .tl-gap .tl-role{color:var(--green)}
 
-/* LABS */
+/* ── LABS ── */
 .labs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
 .lab-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:24px;position:relative;overflow:hidden;transition:all .25s;cursor:pointer}
 .lab-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent,var(--green));transform:scaleX(0);transform-origin:left;transition:transform .3s}
@@ -121,44 +132,72 @@ section{padding:96px 0}
 .lab-link{font-size:11px;color:var(--green);text-decoration:none;display:flex;align-items:center;gap:4px;transition:gap .2s}
 .lab-link:hover{gap:8px}
 
-/* SKILLS */
+/* ── SKILLS ── */
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
 .skill-group{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px}
 .skill-group-title{font-size:10px;color:var(--text3);letter-spacing:.15em;text-transform:uppercase;margin-bottom:12px}
 .skill-item{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text2);padding:5px 0;border-bottom:1px solid var(--border)}
 .skill-item:last-child{border-bottom:none}
 .skill-dot{width:5px;height:5px;border-radius:50%;background:var(--green);flex-shrink:0}
+.skill-dot.blue{background:var(--blue)}
+.skill-dot.amber{background:var(--amber)}
 
-/* CONTACT */
+/* ── CERTS ── */
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.cert-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px 18px;transition:all .2s}
+.cert-card:hover{border-color:var(--border2)}
+.cert-card.in-progress{border-color:rgba(255,184,77,.2);background:rgba(255,184,77,.03)}
+.cert-name{font-size:13px;color:var(--text);font-weight:500;margin-bottom:4px;line-height:1.4}
+.cert-issuer{font-size:11px;color:var(--text2);margin-bottom:8px}
+.cert-footer{display:flex;align-items:center;justify-content:space-between}
+.cert-year{font-size:10px;color:var(--text3)}
+.cert-badge{font-size:9px;padding:2px 8px;border-radius:3px;letter-spacing:.08em;text-transform:uppercase}
+.cert-badge.done{background:var(--green-dim);color:var(--green);border:1px solid rgba(0,229,160,.2)}
+.cert-badge.progress{background:var(--amber-dim);color:var(--amber);border:1px solid rgba(255,184,77,.2)}
+
+/* ── CONTACT ── */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.contact-text{font-family:var(--serif);font-size:clamp(22px,3vw,32px);font-weight:300;line-height:1.4;color:var(--text);margin-bottom:24px}
+.contact-text{font-family:var(--serif);font-size:clamp(20px,3vw,30px);font-weight:300;line-height:1.4;color:var(--text);margin-bottom:24px}
 .contact-links{display:flex;flex-direction:column;gap:10px}
 .contact-link{display:flex;align-items:center;gap:12px;color:var(--text2);text-decoration:none;font-size:13px;padding:12px 16px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;transition:all .2s}
 .contact-link:hover{color:var(--text);border-color:var(--border2);transform:translateX(4px)}
 .contact-link-icon{color:var(--green);font-size:14px;width:16px;flex-shrink:0}
 
-/* FOOTER */
+/* ── FOOTER ── */
 footer{border-top:1px solid var(--border);padding:32px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:11px;color:var(--text3)}
 
-/* ANIM */
+/* ── ANIM ── */
 .fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
 
-@media(max-width:640px){
-  .nav-links{display:none}
-  .contact-grid{grid-template-columns:1fr}
-  .hero-name{font-size:52px}
-}
+@media(max-width:680px){.nav-links{display:none}.contact-grid{grid-template-columns:1fr}.hero-name{font-size:48px}}
 </style>
 </head>
 <body>
 
+<!-- VISITOR BAR -->
+<div id="visitor-bar">
+  <span id="visitor-text">...</span>
+</div>
+
+<!-- HR BANNER -->
+<div id="hr-banner">
+  <span class="hr-banner-text" id="hr-text">👋 ¿Eres de Recursos Humanos o estás buscando talento en ciberseguridad?</span>
+  <div class="hr-banner-actions">
+    <a href="#contact" class="hr-banner-btn" id="hr-cta" onclick="document.getElementById('hr-banner').classList.remove('show')">Ver datos de contacto →</a>
+    <button class="hr-banner-close" onclick="document.getElementById('hr-banner').classList.remove('show')" aria-label="Cerrar">✕</button>
+  </div>
+</div>
+
+<!-- NAV -->
 <nav>
-  <a href="#hero" class="nav-logo">portfolio</a>
+  <a href="#hero" class="nav-logo">lisa.moreno</a>
   <ul class="nav-links">
-    <li><a href="#about" data-i18n="nav_about">Sobre mí</a></li>
+    <li><a href="#awards" data-i18n="nav_awards">Logros</a></li>
+    <li><a href="#about" data-i18n="nav_about">Experiencia</a></li>
     <li><a href="#labs" data-i18n="nav_labs">Labs</a></li>
     <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+    <li><a href="#certs" data-i18n="nav_certs">Certs</a></li>
     <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
   </ul>
   <div class="lang-switcher">
@@ -174,62 +213,147 @@ footer{border-top:1px solid var(--border);padding:32px 0;display:flex;justify-co
 <section id="hero">
   <div class="hero-eyebrow" data-i18n="hero_eyebrow">SOC Analyst · Ciberseguridad</div>
   <h1 class="hero-name">Lisa Marie<br><span>Moreno</span></h1>
-  <p class="hero-title" data-i18n="hero_subtitle">Especialista en análisis de amenazas, threat hunting y respuesta a incidentes. Apasionado por la ciberseguridad defensiva y el análisis forense de ataques reales.</p>
+  <p class="hero-title" data-i18n="hero_subtitle">Cybersecurity Analyst con experiencia real en SOC, monitoreo SIEM e investigación de incidentes. OAS Cyberchallenge 2019 · INCIBE Bootcamp 2026 · CTF competitor.</p>
   <div class="hero-badges">
-    <span class="badge bg">◉ Email Phishing Analysis</span>
+    <span class="badge bg">◉ SOC Operations</span>
     <span class="badge br">◈ Malware Analysis</span>
-    <span class="badge bb">◆ Network Forensics</span>
-    <span class="badge ba">◇ Threat Intelligence</span>
+    <span class="badge bb">◆ SIEM · Splunk · Chronicle</span>
+    <span class="badge ba">◇ MITRE ATT&amp;CK</span>
     <span class="badge bp">◉ OSINT</span>
+    <span class="badge bgold">★ CTF Competitor</span>
   </div>
   <div class="hero-cta">
-    <a href="#labs" class="btn-primary" data-i18n="hero_cta1">Ver labs →</a>
+    <a href="#labs" class="btn-primary" data-i18n="hero_cta1">Ver proyectos →</a>
     <a href="#contact" class="btn-secondary" data-i18n="hero_cta2">Contactar</a>
   </div>
   <div class="terminal-prompt">
     <div class="terminal-bar">
       <div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div>
-      <span class="terminal-title">bash — analyst@kali: ~</span>
+      <span class="terminal-title">bash — lisa@kali: ~</span>
     </div>
     <div class="terminal-body">
-      <div><span class="t-prompt">analyst@kali:~$</span> <span class="t-cmd">whoami</span></div>
-      <div class="t-out"><span class="t-hl" data-i18n="term_name">Tu Nombre</span> · SOC Analyst</div>
-      <div style="margin-top:6px"><span class="t-prompt">analyst@kali:~$</span> <span class="t-cmd">cat status.txt</span></div>
-      <div class="t-out" data-i18n="term_status">Disponible para oportunidades en ciberseguridad</div>
-      <div style="margin-top:6px"><span class="t-prompt">analyst@kali:~$</span> <span class="t-cmd">ls labs/</span></div>
-      <div class="t-out">infected_monkeys/&nbsp;&nbsp;dnstwist/&nbsp;&nbsp;gophish_ngrok/&nbsp;&nbsp;ssh_ransomware/</div>
-      <div style="margin-top:6px"><span class="t-prompt">analyst@kali:~$</span> <span class="t-cursor"></span></div>
+      <div><span class="t-p">lisa@kali:~$</span> <span class="t-c">whoami</span></div>
+      <div class="t-o"><span class="t-hl">Lisa Marie Moreno</span> · SOC Analyst · Spain</div>
+      <div style="margin-top:6px"><span class="t-p">lisa@kali:~$</span> <span class="t-c">cat highlights.txt</span></div>
+      <div class="t-o">2nd Place OAS Cyberchallenge (Cartagena, 2019)</div>
+      <div class="t-o">SOC Analyst @ F2TC · OAS Cybersecurity Program</div>
+      <div class="t-o">INCIBE Advanced Bootcamp 2026 · NSE 1-2-3 Fortinet</div>
+      <div style="margin-top:6px"><span class="t-p">lisa@kali:~$</span> <span class="t-c">ls labs/</span></div>
+      <div class="t-o">infection_monkey/ &nbsp;dnstwist/ &nbsp;gophish_ngrok/ &nbsp;ssh_ransomware/</div>
+      <div style="margin-top:6px"><span class="t-p">lisa@kali:~$</span> <span class="t-cursor"></span></div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- AWARDS -->
+<section id="awards" class="fade-in">
+  <div class="section-label" data-i18n="awards_label">Reconocimientos</div>
+  <h2 class="section-title" data-i18n="awards_title">Logros <em>destacados</em></h2>
+  <div class="awards-grid">
+
+    <div class="award-card">
+      <div class="award-place silver">2º</div>
+      <div class="award-title" data-i18n="aw1_title">OAS International Cyberchallenge</div>
+      <div class="award-desc" data-i18n="aw1_desc">Superé equipos internacionales en una CTF de alta presión centrada en defensa de incidentes, patrocinada por la Organización de Estados Americanos. Cartagena, Colombia.</div>
+      <div class="award-year">2019 · OAS / CICTE</div>
+    </div>
+
+    <div class="award-card">
+      <div class="award-place bronze">3º</div>
+      <div class="award-title" data-i18n="aw2_title">CTF Nacional — República Dominicana</div>
+      <div class="award-desc" data-i18n="aw2_desc">Retos avanzados en ethical hacking, digital forensics y explotación de sistemas a nivel nacional.</div>
+      <div class="award-year">2019 · Dominican Republic</div>
+    </div>
+
+    <div class="award-card">
+      <div class="award-place bronze">3º</div>
+      <div class="award-title" data-i18n="aw3_title">CTF — INCIBE Bootcamp</div>
+      <div class="award-desc" data-i18n="aw3_desc">3er lugar en la competición CTF organizada por el bootcamp avanzado de ciberseguridad de INCIBE. Retos de análisis, exploits y respuesta a incidentes.</div>
+      <div class="award-year">2026 · INCIBE · Linares, Spain</div>
+    </div>
+
+    <div class="award-card">
+      <div class="award-place winner">★</div>
+      <div class="award-title" data-i18n="aw4_title">Winner — Full Stack Bootcamp Project</div>
+      <div class="award-desc" data-i18n="aw4_desc">Proyecto técnico más destacado del bootcamp, demostrando capacidades avanzadas en desarrollo y seguridad de aplicaciones web.</div>
+      <div class="award-year">2025 · 4Geeks Academy</div>
+    </div>
+
+    <div class="award-card">
+      <div class="award-place winner">★</div>
+      <div class="award-title" data-i18n="aw5_title">Winner — Mujeres TICs Bootcamp (SGH)</div>
+      <div class="award-desc" data-i18n="aw5_desc">Reconocida por el proyecto tecnológico más sobresaliente entre todas las participantes del programa.</div>
+      <div class="award-year">2017 · SGH</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT / TIMELINE -->
 <section id="about" class="fade-in">
   <div class="section-label" data-i18n="about_label">Trayectoria</div>
-  <h2 class="section-title" data-i18n="about_title">Mi <em>historia</em> en seguridad</h2>
+  <h2 class="section-title" data-i18n="about_title">Experiencia <em>profesional</em></h2>
   <div class="timeline">
 
     <div class="tl-item active">
       <div class="tl-date">2026 — PRESENTE</div>
-      <div class="tl-role" data-i18n="tl1_role">Búsqueda activa · SOC Analyst</div>
-      <div class="tl-company" data-i18n="tl1_company">Open to work · España / Remoto</div>
-      <div class="tl-desc" data-i18n="tl1_desc">Completando laboratorios prácticos de ciberseguridad y construyendo portafolio técnico en análisis de amenazas, malware y phishing.</div>
+      <div class="tl-role" data-i18n="tl1_role">Advanced Cybersecurity Bootcamp</div>
+      <div class="tl-company" data-i18n="tl1_company">INCIBE · La Mina Startup · Linares, Spain</div>
+      <div class="tl-desc" data-i18n="tl1_desc">Bootcamp avanzado de ciberseguridad patrocinado por INCIBE. Proyecto EcoGuard DNS. 3er lugar en CTF final. Formación intensiva en SOC, análisis de amenazas y herramientas defensivas.</div>
     </div>
 
     <div class="tl-item active">
-      <div class="tl-date">2022 — 2026</div>
-      <div class="tl-gap">
-        <div class="tl-role" data-i18n="tl2_role">Proyectos personales · Self-directed research</div>
-        <div class="tl-company" data-i18n="tl2_company">Formación independiente en ciberseguridad</div>
-      </div>
-      <div class="tl-desc" data-i18n="tl2_desc">Durante este período me formé de forma intensiva e independiente: análisis de malware en entornos controlados, práctica de herramientas de threat intelligence, laboratorios de phishing simulado y estudio de TTPs del framework MITRE ATT&amp;CK. Los proyectos están documentados en este portafolio.</div>
+      <div class="tl-date">2024 — 2025</div>
+      <div class="tl-role" data-i18n="tl2_role">Full Stack Developer Bootcamp</div>
+      <div class="tl-company blue" data-i18n="tl2_company">4Geeks Academy · Spain</div>
+      <div class="tl-desc" data-i18n="tl2_desc">Desarrollo web full stack. Proyecto Art Vibes — ganadora del premio al mejor proyecto técnico del bootcamp. Aplicación de principios de seguridad en desarrollo web.</div>
     </div>
 
     <div class="tl-item">
-      <div class="tl-date">2020 — 2022</div>
-      <div class="tl-role" data-i18n="tl3_role">Formación en Ciberseguridad</div>
-      <div class="tl-company" data-i18n="tl3_company">Certificaciones · Cursos · CTFs</div>
-      <div class="tl-desc" data-i18n="tl3_desc">Inicio del camino en ciberseguridad. Primeras prácticas con Kali Linux, redes, análisis de tráfico con Wireshark y fundamentos de SOC operations.</div>
+      <div class="tl-date">01/2022 — 09/2022</div>
+      <div class="tl-role" data-i18n="tl3_role">Data Analyst</div>
+      <div class="tl-company" data-i18n="tl3_company">Universidad Europea del Atlántico · Spain</div>
+      <div class="tl-desc">
+        <ul data-i18n-list="tl3_bullets">
+          <li>Creación de reportes y dashboards en Google Data Studio para múltiples departamentos</li>
+          <li>Extracción y análisis de datos desde bases de datos SQL</li>
+          <li>Automatización de procesos de reporting periódico para mejorar la eficiencia operativa</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tl-item active">
+      <div class="tl-date">03/2021 — 12/2021</div>
+      <div class="tl-role" data-i18n="tl4_role">Security Operations Center Analyst</div>
+      <div class="tl-company" data-i18n="tl4_company">F2TC Cyber Security · Dominican Republic</div>
+      <div class="tl-desc">
+        <ul data-i18n-list="tl4_bullets">
+          <li>Monitoreo en tiempo real de alertas de seguridad con herramientas SIEM</li>
+          <li>Investigación y triage de incidentes de seguridad de nivel bajo y medio</li>
+          <li>Escalada de amenazas críticas a equipos de respuesta a incidentes</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tl-item active">
+      <div class="tl-date">11/2020 — 04/2021</div>
+      <div class="tl-role" data-i18n="tl5_role">Cybersecurity Program Internship (CICTE)</div>
+      <div class="tl-company" data-i18n="tl5_company">Organization of American States (OAS) · USA</div>
+      <div class="tl-desc">
+        <ul data-i18n-list="tl5_bullets">
+          <li>Investigación de amenazas y tendencias en ciberseguridad para Latinoamérica y el Caribe</li>
+          <li>Análisis de riesgos y desarrollo de matrices de riesgo para proyectos regionales</li>
+          <li>Soporte en implementación de programas de ciberseguridad en Iberoamérica</li>
+          <li>Elaboración de reportes técnicos y ejecutivos de ciberseguridad</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tl-item edu">
+      <div class="tl-date">2017 — 2020</div>
+      <div class="tl-role" data-i18n="tl6_role">Higher Vocational Diploma — Information Security</div>
+      <div class="tl-company blue" data-i18n="tl6_company">Instituto Tecnológico de las Américas · Dominican Republic</div>
+      <div class="tl-desc" data-i18n="tl6_desc">Formación técnica superior en seguridad de la información. CTF nacional 3er lugar (2019). Premio Mujeres TICs (2017).</div>
     </div>
 
   </div>
@@ -245,75 +369,60 @@ footer{border-top:1px solid var(--border);padding:32px 0;display:flex;justify-co
       <div class="lab-num">LAB_01</div>
       <div class="lab-icon" style="background:var(--red-dim)">🐒</div>
       <div class="lab-title">Infection Monkey</div>
-      <div class="lab-desc" data-i18n="lab1_desc">Simulación de movimiento lateral y propagación de malware en red interna usando Infection Monkey de Guardicore. Análisis de vectores de ataque y gaps de segmentación de red.</div>
+      <div class="lab-desc" data-i18n="lab1_desc">Simulación de movimiento lateral y propagación de malware en red interna. Análisis de vectores de ataque y gaps de segmentación de red.</div>
       <div class="lab-tags">
         <span class="badge br lab-tag">Lateral Movement</span>
         <span class="badge ba lab-tag">Network Segmentation</span>
         <span class="badge bb lab-tag">MITRE T1021</span>
       </div>
-      <div class="lab-meta">
-        <span class="lab-date">2024</span>
-        <a href="#" class="lab-link">writeup →</a>
-      </div>
+      <div class="lab-meta"><span class="lab-date">2024</span><a href="#" class="lab-link">writeup →</a></div>
     </div>
 
     <div class="lab-card" style="--accent:#ffb84d">
       <div class="lab-num">LAB_02</div>
       <div class="lab-icon" style="background:var(--amber-dim)">🔍</div>
       <div class="lab-title">DNSTwist — Typosquatting</div>
-      <div class="lab-desc" data-i18n="lab2_desc">Detección de dominios typosquatting con DNSTwist. Análisis de variaciones de dominio usadas en campañas de phishing: homoglyphs, transposición de caracteres y dominios bitsquatting.</div>
+      <div class="lab-desc" data-i18n="lab2_desc">Detección de dominios typosquatting. Análisis de variaciones usadas en phishing: homoglyphs, transposición de caracteres y bitsquatting.</div>
       <div class="lab-tags">
         <span class="badge ba lab-tag">OSINT</span>
         <span class="badge bg lab-tag">Phishing Detection</span>
         <span class="badge bb lab-tag">DNS Analysis</span>
       </div>
-      <div class="lab-meta">
-        <span class="lab-date">2024</span>
-        <a href="#" class="lab-link">writeup →</a>
-      </div>
+      <div class="lab-meta"><span class="lab-date">2024</span><a href="#" class="lab-link">writeup →</a></div>
     </div>
 
     <div class="lab-card" style="--accent:#5b9cf6">
       <div class="lab-num">LAB_03</div>
       <div class="lab-icon" style="background:var(--blue-dim)">🎣</div>
       <div class="lab-title">Gophish + Ngrok</div>
-      <div class="lab-desc" data-i18n="lab3_desc">Simulación de campaña de phishing controlada con Gophish y exposición del servidor mediante Ngrok. Análisis de métricas de apertura, clicks y recolección de credenciales en entorno sandbox.</div>
+      <div class="lab-desc" data-i18n="lab3_desc">Simulación de campaña de phishing con Gophish y exposición via Ngrok. Análisis de métricas de apertura, clicks y credential harvesting en sandbox.</div>
       <div class="lab-tags">
         <span class="badge bb lab-tag">Phishing Simulation</span>
         <span class="badge bp lab-tag">Social Engineering</span>
         <span class="badge br lab-tag">Credential Harvesting</span>
       </div>
-      <div class="lab-meta">
-        <span class="lab-date">2024</span>
-        <a href="#" class="lab-link">writeup →</a>
-      </div>
+      <div class="lab-meta"><span class="lab-date">2024</span><a href="#" class="lab-link">writeup →</a></div>
     </div>
 
     <div class="lab-card" style="--accent:#a78bfa">
       <div class="lab-num">LAB_04</div>
       <div class="lab-icon" style="background:var(--purple-dim)">🔐</div>
       <div class="lab-title">SSH &amp; Ransomware Analysis</div>
-      <div class="lab-desc" data-i18n="lab4_desc">Análisis de ataques SSH (brute force, key exploitation) y estudio de comportamiento de ransomware en entorno controlado. Captura de IOCs, análisis de cifrado y procedimientos de respuesta a incidentes.</div>
+      <div class="lab-desc" data-i18n="lab4_desc">Análisis de ataques SSH (brute force, key exploitation) y comportamiento de ransomware en entorno controlado. Extracción de IOCs y respuesta a incidentes.</div>
       <div class="lab-tags">
         <span class="badge bp lab-tag">SSH Exploitation</span>
         <span class="badge br lab-tag">Ransomware</span>
         <span class="badge bg lab-tag">IOC Extraction</span>
       </div>
-      <div class="lab-meta">
-        <span class="lab-date">2025</span>
-        <a href="#" class="lab-link">writeup →</a>
-      </div>
+      <div class="lab-meta"><span class="lab-date">2025</span><a href="#" class="lab-link">writeup →</a></div>
     </div>
 
     <div class="lab-card" style="--accent:#4a5568;opacity:.55;cursor:default">
       <div class="lab-num">LAB_05</div>
       <div class="lab-icon" style="background:rgba(74,85,104,.15);font-size:22px">+</div>
       <div class="lab-title" data-i18n="lab_soon_title">Próximamente</div>
-      <div class="lab-desc" data-i18n="lab_soon_desc">Nuevo laboratorio en desarrollo. Actualizando regularmente con nuevos proyectos y análisis.</div>
-      <div class="lab-meta">
-        <span class="lab-date" data-i18n="lab_soon_date">En progreso</span>
-        <span style="font-size:11px;color:var(--text3)">···</span>
-      </div>
+      <div class="lab-desc" data-i18n="lab_soon_desc">Nuevo laboratorio en desarrollo.</div>
+      <div class="lab-meta"><span class="lab-date" data-i18n="lab_soon_date">En progreso</span><span style="font-size:11px;color:var(--text3)">···</span></div>
     </div>
 
   </div>
@@ -325,50 +434,109 @@ footer{border-top:1px solid var(--border);padding:32px 0;display:flex;justify-co
   <h2 class="section-title" data-i18n="skills_title"><em>Stack</em> técnico</h2>
   <div class="skills-grid">
     <div class="skill-group">
-      <div class="skill-group-title" data-i18n="sk1_title">Análisis &amp; Forensics</div>
-      <div class="skill-item"><span class="skill-dot"></span>Wireshark / tcpdump</div>
-      <div class="skill-item"><span class="skill-dot"></span>ANY.RUN / Hybrid Analysis</div>
-      <div class="skill-item"><span class="skill-dot"></span>VirusTotal</div>
-      <div class="skill-item"><span class="skill-dot"></span>Volatility</div>
-      <div class="skill-item"><span class="skill-dot"></span>Autopsy</div>
+      <div class="skill-group-title" data-i18n="sk1">SOC &amp; Incident Response</div>
+      <div class="skill-item"><span class="skill-dot"></span>SIEM: Splunk &amp; Chronicle</div>
+      <div class="skill-item"><span class="skill-dot"></span>Log Analysis</div>
+      <div class="skill-item"><span class="skill-dot"></span>Alert Triage</div>
+      <div class="skill-item"><span class="skill-dot"></span>Incident Response basics</div>
+      <div class="skill-item"><span class="skill-dot"></span>EDR monitoring</div>
     </div>
     <div class="skill-group">
-      <div class="skill-group-title" data-i18n="sk2_title">Threat Intelligence</div>
+      <div class="skill-group-title" data-i18n="sk2">Threat Intelligence</div>
       <div class="skill-item"><span class="skill-dot"></span>MITRE ATT&amp;CK</div>
-      <div class="skill-item"><span class="skill-dot"></span>OSINT / Maltego</div>
+      <div class="skill-item"><span class="skill-dot"></span>OSINT</div>
+      <div class="skill-item"><span class="skill-dot"></span>Threat Hunting</div>
       <div class="skill-item"><span class="skill-dot"></span>DNSTwist</div>
-      <div class="skill-item"><span class="skill-dot"></span>Shodan</div>
-      <div class="skill-item"><span class="skill-dot"></span>urlscan.io</div>
+      <div class="skill-item"><span class="skill-dot"></span>VirusTotal · Shodan</div>
     </div>
     <div class="skill-group">
-      <div class="skill-group-title" data-i18n="sk3_title">Phishing &amp; Social Eng.</div>
-      <div class="skill-item"><span class="skill-dot"></span>Gophish</div>
-      <div class="skill-item"><span class="skill-dot"></span>PhishTool</div>
+      <div class="skill-group-title" data-i18n="sk3">Análisis &amp; Forensics</div>
+      <div class="skill-item"><span class="skill-dot"></span>Wireshark / tcpdump</div>
+      <div class="skill-item"><span class="skill-dot"></span>Malware sandbox (ANY.RUN)</div>
       <div class="skill-item"><span class="skill-dot"></span>Email Header Analysis</div>
       <div class="skill-item"><span class="skill-dot"></span>SPF / DKIM / DMARC</div>
-      <div class="skill-item"><span class="skill-dot"></span>MxToolbox</div>
+      <div class="skill-item"><span class="skill-dot"></span>IOC Extraction</div>
     </div>
     <div class="skill-group">
-      <div class="skill-group-title" data-i18n="sk4_title">Entornos &amp; Plataformas</div>
-      <div class="skill-item"><span class="skill-dot"></span>Kali Linux</div>
-      <div class="skill-item"><span class="skill-dot"></span>VirtualBox / VMware</div>
-      <div class="skill-item"><span class="skill-dot"></span>Infection Monkey</div>
-      <div class="skill-item"><span class="skill-dot"></span>Ngrok</div>
-      <div class="skill-item"><span class="skill-dot"></span>Splunk (básico)</div>
+      <div class="skill-group-title" data-i18n="sk4">Lenguajes &amp; Scripting</div>
+      <div class="skill-item"><span class="skill-dot amber"></span>Python</div>
+      <div class="skill-item"><span class="skill-dot amber"></span>Bash / Shell scripting</div>
+      <div class="skill-item"><span class="skill-dot amber"></span>PowerShell</div>
+      <div class="skill-item"><span class="skill-dot amber"></span>SQL</div>
+      <div class="skill-item"><span class="skill-dot amber"></span>YARA rules</div>
     </div>
     <div class="skill-group">
-      <div class="skill-group-title" data-i18n="sk5_title">Lenguajes</div>
-      <div class="skill-item"><span class="skill-dot"></span>Bash / Shell scripting</div>
-      <div class="skill-item"><span class="skill-dot"></span>Python (automatización)</div>
-      <div class="skill-item"><span class="skill-dot"></span>SQL (básico)</div>
-      <div class="skill-item"><span class="skill-dot"></span>YARA rules</div>
+      <div class="skill-group-title" data-i18n="sk5">Plataformas</div>
+      <div class="skill-item"><span class="skill-dot blue"></span>Kali Linux</div>
+      <div class="skill-item"><span class="skill-dot blue"></span>Linux / Unix Admin</div>
+      <div class="skill-item"><span class="skill-dot blue"></span>VirtualBox / VMware</div>
+      <div class="skill-item"><span class="skill-dot blue"></span>LetsDefend SOC</div>
+      <div class="skill-item"><span class="skill-dot blue"></span>Google Data Studio</div>
     </div>
     <div class="skill-group">
-      <div class="skill-group-title" data-i18n="sk6_title">Idiomas</div>
+      <div class="skill-group-title" data-i18n="sk6">Idiomas</div>
       <div class="skill-item"><span class="skill-dot"></span><span data-i18n="lang1">Español — Nativo</span></div>
-      <div class="skill-item"><span class="skill-dot"></span><span data-i18n="lang2">Inglés — Profesional</span></div>
+      <div class="skill-item"><span class="skill-dot"></span><span data-i18n="lang2">Inglés — C2 (EF SET)</span></div>
       <div class="skill-item"><span class="skill-dot"></span><span data-i18n="lang3">Francés — Profesional</span></div>
     </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certs" class="fade-in">
+  <div class="section-label" data-i18n="certs_label">Certificaciones</div>
+  <h2 class="section-title" data-i18n="certs_title">Certs &amp; <em>formación</em></h2>
+  <div class="certs-grid">
+
+    <div class="cert-card">
+      <div class="cert-name">Junior Cybersecurity Analyst Career Path</div>
+      <div class="cert-issuer">Cisco Networking Academy</div>
+      <div class="cert-footer"><span class="cert-year">03/2026</span><span class="cert-badge done">Obtenida</span></div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-name">NSE 1, NSE 2, NSE 3 — Fortinet Certified Associate</div>
+      <div class="cert-issuer">Fortinet</div>
+      <div class="cert-footer"><span class="cert-year">2026</span><span class="cert-badge done">Obtenida</span></div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-name">SOC Member Certification</div>
+      <div class="cert-issuer">LetsDefend</div>
+      <div class="cert-footer"><span class="cert-year">03/2026</span><span class="cert-badge done">Obtenida</span></div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-name">EF SET English Certificate C2</div>
+      <div class="cert-issuer">EF Education First</div>
+      <div class="cert-footer"><span class="cert-year">2025</span><span class="cert-badge done">Obtenida</span></div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-name">CyberArk Certified Trustee</div>
+      <div class="cert-issuer">CyberArk</div>
+      <div class="cert-footer"><span class="cert-year">2020</span><span class="cert-badge done">Obtenida</span></div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-name">HCIA Cloud Computing</div>
+      <div class="cert-issuer">Huawei</div>
+      <div class="cert-footer"><span class="cert-year">2020</span><span class="cert-badge done">Obtenida</span></div>
+    </div>
+
+    <!-- EN PROGRESO -->
+    <div class="cert-card in-progress">
+      <div class="cert-name">Google Cybersecurity Professional Certificate</div>
+      <div class="cert-issuer">Google · Coursera</div>
+      <div class="cert-footer"><span class="cert-year" data-i18n="cert_progress_year">En curso · 2026</span><span class="cert-badge progress" data-i18n="cert_progress">En progreso</span></div>
+    </div>
+
+    <div class="cert-card in-progress">
+      <div class="cert-name">NSE 4 — Fortinet Certified Professional</div>
+      <div class="cert-issuer">Fortinet</div>
+      <div class="cert-footer"><span class="cert-year" data-i18n="cert_progress_year">En curso · 2026</span><span class="cert-badge progress" data-i18n="cert_progress">En progreso</span></div>
+    </div>
+
   </div>
 </section>
 
@@ -377,131 +545,249 @@ footer{border-top:1px solid var(--border);padding:32px 0;display:flex;justify-co
   <div class="section-label" data-i18n="contact_label">Contacto</div>
   <div class="contact-grid">
     <div>
-      <div class="contact-text" data-i18n="contact_text">¿Buscas un analista con experiencia práctica real?</div>
-      <p style="font-size:13px;color:var(--text2);line-height:1.8" data-i18n="contact_sub">Disponible para posiciones de SOC Analyst, Threat Intelligence o roles en ciberseguridad defensiva. Abierto a trabajo remoto e híbrido.</p>
+      <div class="contact-text" data-i18n="contact_text">¿Buscas una SOC analyst con experiencia real y logros internacionales?</div>
+      <p style="font-size:13px;color:var(--text2);line-height:1.8" data-i18n="contact_sub">Disponible para posiciones de SOC Analyst, Threat Intelligence o ciberseguridad defensiva. Abierta a trabajo en España y remoto.</p>
     </div>
     <div class="contact-links">
-      <a href="mailto:tu@email.com" class="contact-link">
-        <span class="contact-link-icon">@</span><span>tu@email.com</span>
+      <a href="mailto:lisamoreno.it@gmail.com" class="contact-link">
+        <span class="contact-link-icon">@</span><span>lisamoreno.it@gmail.com</span>
       </a>
-      <a href="https://linkedin.com/in/tu-perfil" class="contact-link" target="_blank">
-        <span class="contact-link-icon">in</span><span>linkedin.com/in/tu-perfil</span>
+      <a href="tel:+34685707997" class="contact-link">
+        <span class="contact-link-icon">#</span><span>+34 685 707 997</span>
+      </a>
+      <a href="https://linkedin.com/in/lisa-marie-moreno" class="contact-link" target="_blank">
+        <span class="contact-link-icon">in</span><span>linkedin.com/in/lisa-marie-moreno</span>
       </a>
       <a href="https://github.com/tu-usuario" class="contact-link" target="_blank">
         <span class="contact-link-icon">&lt;/&gt;</span><span>github.com/tu-usuario</span>
-      </a>
-      <a href="https://tryhackme.com/p/tu-perfil" class="contact-link" target="_blank">
-        <span class="contact-link-icon">⌂</span><span>TryHackMe Profile</span>
       </a>
     </div>
   </div>
 </section>
 
 <footer>
-  <span data-i18n="footer_copy">© 2026 · Construido con HTML puro · Hosteado en GitHub Pages</span>
-  <span style="color:var(--green)">analyst@kali:~$ _</span>
+  <span data-i18n="footer_copy">© 2026 · Lisa Marie Moreno · Hosteado en GitHub Pages</span>
+  <span style="color:var(--green)">lisa@kali:~$ _</span>
 </footer>
 
 </main>
 
 <script>
-const i18n = {
-  es: {
-    nav_about:'Sobre mí', nav_labs:'Labs', nav_skills:'Skills', nav_contact:'Contacto',
-    hero_eyebrow:'SOC Analyst · Ciberseguridad',
-    hero_subtitle:'Especialista en análisis de amenazas, threat hunting y respuesta a incidentes. Apasionado por la ciberseguridad defensiva y el análisis forense de ataques reales.',
-    hero_cta1:'Ver labs →', hero_cta2:'Contactar',
-    term_name:'Tu Nombre', term_status:'Disponible para oportunidades en ciberseguridad',
-    about_label:'Trayectoria', about_title:'Mi historia en seguridad',
-    tl1_role:'Búsqueda activa · SOC Analyst', tl1_company:'Open to work · España / Remoto',
-    tl1_desc:'Completando laboratorios prácticos de ciberseguridad y construyendo portafolio técnico en análisis de amenazas, malware y phishing.',
-    tl2_role:'Proyectos personales · Self-directed research', tl2_company:'Formación independiente en ciberseguridad',
-    tl2_desc:'Durante este período me formé de forma intensiva e independiente: análisis de malware en entornos controlados, práctica de herramientas de threat intelligence, laboratorios de phishing simulado y estudio de TTPs del framework MITRE ATT&CK. Los proyectos están documentados en este portafolio.',
-    tl3_role:'Formación en Ciberseguridad', tl3_company:'Certificaciones · Cursos · CTFs',
-    tl3_desc:'Inicio del camino en ciberseguridad. Primeras prácticas con Kali Linux, redes, análisis de tráfico con Wireshark y fundamentos de SOC operations.',
-    labs_label:'Laboratorios', labs_title:'Proyectos prácticos',
-    lab1_desc:'Simulación de movimiento lateral y propagación de malware en red interna usando Infection Monkey de Guardicore. Análisis de vectores de ataque y gaps de segmentación de red.',
-    lab2_desc:'Detección de dominios typosquatting con DNSTwist. Análisis de variaciones de dominio usadas en campañas de phishing: homoglyphs, transposición de caracteres y dominios bitsquatting.',
-    lab3_desc:'Simulación de campaña de phishing controlada con Gophish y exposición del servidor mediante Ngrok. Análisis de métricas de apertura, clicks y recolección de credenciales en entorno sandbox.',
-    lab4_desc:'Análisis de ataques SSH (brute force, key exploitation) y estudio de comportamiento de ransomware en entorno controlado. Captura de IOCs, análisis de cifrado y procedimientos de respuesta a incidentes.',
-    lab_soon_title:'Próximamente', lab_soon_desc:'Nuevo laboratorio en desarrollo. Actualizando regularmente con nuevos proyectos y análisis.', lab_soon_date:'En progreso',
-    skills_label:'Habilidades', skills_title:'Stack técnico',
-    sk1_title:'Análisis & Forensics', sk2_title:'Threat Intelligence', sk3_title:'Phishing & Social Eng.',
-    sk4_title:'Entornos & Plataformas', sk5_title:'Lenguajes', sk6_title:'Idiomas',
-    lang1:'Español — Nativo', lang2:'Inglés — Profesional', lang3:'Francés — Profesional',
-    contact_label:'Contacto', contact_text:'¿Buscas un analista con experiencia práctica real?',
-    contact_sub:'Disponible para posiciones de SOC Analyst, Threat Intelligence o roles en ciberseguridad defensiva. Abierto a trabajo remoto e híbrido.',
-    footer_copy:'© 2026 · Construido con HTML puro · Hosteado en GitHub Pages',
-  },
-  en: {
-    nav_about:'About', nav_labs:'Labs', nav_skills:'Skills', nav_contact:'Contact',
-    hero_eyebrow:'SOC Analyst · Cybersecurity',
-    hero_subtitle:'Specialist in threat analysis, threat hunting and incident response. Passionate about defensive cybersecurity and forensic analysis of real-world attacks.',
-    hero_cta1:'View labs →', hero_cta2:'Contact me',
-    term_name:'Your Name', term_status:'Available for cybersecurity opportunities',
-    about_label:'Experience', about_title:'My security journey',
-    tl1_role:'Actively seeking · SOC Analyst', tl1_company:'Open to work · Spain / Remote',
-    tl1_desc:'Completing hands-on cybersecurity labs and building a technical portfolio in threat analysis, malware analysis and phishing investigation.',
-    tl2_role:'Personal projects · Self-directed research', tl2_company:'Independent cybersecurity training',
-    tl2_desc:'During this period I trained intensively and independently: malware analysis in controlled environments, threat intelligence tooling practice, simulated phishing labs and in-depth study of MITRE ATT&CK TTPs. All projects are documented in this portfolio.',
-    tl3_role:'Cybersecurity Training', tl3_company:'Certifications · Courses · CTFs',
-    tl3_desc:'Beginning of the cybersecurity path. First hands-on experience with Kali Linux, networking, traffic analysis with Wireshark and SOC operations fundamentals.',
-    labs_label:'Laboratories', labs_title:'Practical projects',
-    lab1_desc:'Simulation of lateral movement and malware propagation on an internal network using Guardicore\'s Infection Monkey. Analysis of attack vectors and network segmentation gaps.',
-    lab2_desc:'Detection of typosquatting domains with DNSTwist. Analysis of domain variations used in phishing campaigns: homoglyphs, character transposition and bitsquatting domains.',
-    lab3_desc:'Controlled phishing campaign simulation with Gophish and server exposure via Ngrok. Analysis of open rates, clicks and credential harvesting metrics in a sandbox environment.',
-    lab4_desc:'Analysis of SSH attacks (brute force, key exploitation) and ransomware behavior study in a controlled environment. IOC extraction, encryption analysis and incident response procedures.',
-    lab_soon_title:'Coming soon', lab_soon_desc:'New laboratory in development. Updating regularly with new projects and analyses.', lab_soon_date:'In progress',
-    skills_label:'Skills', skills_title:'Technical stack',
-    sk1_title:'Analysis & Forensics', sk2_title:'Threat Intelligence', sk3_title:'Phishing & Social Eng.',
-    sk4_title:'Environments & Platforms', sk5_title:'Languages', sk6_title:'Spoken languages',
-    lang1:'Spanish — Native', lang2:'English — Professional', lang3:'French — Professional',
-    contact_label:'Contact', contact_text:'Looking for an analyst with real hands-on experience?',
-    contact_sub:'Available for SOC Analyst, Threat Intelligence or defensive cybersecurity roles. Open to remote and hybrid work.',
-    footer_copy:'© 2026 · Built with pure HTML · Hosted on GitHub Pages',
-  },
-  fr: {
-    nav_about:'À propos', nav_labs:'Labs', nav_skills:'Compétences', nav_contact:'Contact',
-    hero_eyebrow:'Analyste SOC · Cybersécurité',
-    hero_subtitle:'Spécialiste en analyse des menaces, threat hunting et réponse aux incidents. Passionné par la cybersécurité défensive et l\'analyse forensique des attaques réelles.',
-    hero_cta1:'Voir les labs →', hero_cta2:'Me contacter',
-    term_name:'Votre Nom', term_status:'Disponible pour des opportunités en cybersécurité',
-    about_label:'Parcours', about_title:'Mon parcours en sécurité',
-    tl1_role:'Recherche active · Analyste SOC', tl1_company:'Open to work · Espagne / Télétravail',
-    tl1_desc:'Réalisation de laboratoires pratiques en cybersécurité et construction d\'un portfolio technique en analyse des menaces, des malwares et du phishing.',
-    tl2_role:'Projets personnels · Recherche autodidacte', tl2_company:'Formation indépendante en cybersécurité',
-    tl2_desc:'Durant cette période, je me suis formé de manière intensive et indépendante : analyse de malwares en environnements contrôlés, pratique des outils de threat intelligence, laboratoires de phishing simulé et étude approfondie des TTPs du framework MITRE ATT&CK. Tous les projets sont documentés dans ce portfolio.',
-    tl3_role:'Formation en Cybersécurité', tl3_company:'Certifications · Cours · CTFs',
-    tl3_desc:'Début du parcours en cybersécurité. Premières expériences pratiques avec Kali Linux, les réseaux, l\'analyse de trafic avec Wireshark et les fondamentaux des opérations SOC.',
-    labs_label:'Laboratoires', labs_title:'Projets pratiques',
-    lab1_desc:'Simulation de mouvement latéral et de propagation de malware sur un réseau interne avec Infection Monkey de Guardicore. Analyse des vecteurs d\'attaque et des lacunes de segmentation réseau.',
-    lab2_desc:'Détection de domaines typosquatting avec DNSTwist. Analyse des variations de domaines utilisées dans les campagnes de phishing : homoglyphes, transposition de caractères et domaines bitsquatting.',
-    lab3_desc:'Simulation contrôlée de campagne de phishing avec Gophish et exposition du serveur via Ngrok. Analyse des taux d\'ouverture, de clics et de collecte d\'identifiants en environnement sandbox.',
-    lab4_desc:'Analyse des attaques SSH (brute force, exploitation de clés) et étude du comportement de ransomware en environnement contrôlé. Extraction d\'IOCs, analyse du chiffrement et procédures de réponse aux incidents.',
-    lab_soon_title:'Bientôt disponible', lab_soon_desc:'Nouveau laboratoire en développement. Mise à jour régulière avec de nouveaux projets.', lab_soon_date:'En cours',
-    skills_label:'Compétences', skills_title:'Stack technique',
-    sk1_title:'Analyse & Forensics', sk2_title:'Threat Intelligence', sk3_title:'Phishing & Ing. Sociale',
-    sk4_title:'Environnements & Plateformes', sk5_title:'Langages', sk6_title:'Langues parlées',
-    lang1:'Espagnol — Natif', lang2:'Anglais — Professionnel', lang3:'Français — Professionnel',
-    contact_label:'Contact', contact_text:'Vous cherchez un analyste avec une vraie expérience pratique ?',
-    contact_sub:'Disponible pour des postes d\'Analyste SOC, Threat Intelligence ou en cybersécurité défensive. Ouvert au télétravail et au travail hybride.',
-    footer_copy:'© 2026 · Construit en HTML pur · Hébergé sur GitHub Pages',
-  }
+// ─── i18n ───────────────────────────────────────────────────────────────────
+const T = {
+es:{
+  nav_awards:'Logros',nav_about:'Experiencia',nav_labs:'Labs',nav_skills:'Skills',nav_certs:'Certs',nav_contact:'Contacto',
+  hero_eyebrow:'SOC Analyst · Ciberseguridad · Spain',
+  hero_subtitle:'Cybersecurity Analyst con experiencia real en SOC, monitoreo SIEM e investigación de incidentes. OAS Cyberchallenge 2019 · INCIBE Bootcamp 2026 · CTF competitor.',
+  hero_cta1:'Ver proyectos →',hero_cta2:'Contactar',
+  awards_label:'Reconocimientos',awards_title:'Logros destacados',
+  aw1_title:'2º Lugar — OAS International Cyberchallenge',
+  aw1_desc:'Superé equipos internacionales en CTF de alta presión centrada en defensa de incidentes, patrocinada por la OEA. Cartagena, Colombia.',
+  aw2_title:'3er Lugar — CTF Nacional (R. Dominicana)',
+  aw2_desc:'Retos avanzados en ethical hacking, digital forensics y explotación de sistemas a nivel nacional.',
+  aw3_title:'3er Lugar — CTF INCIBE Bootcamp',
+  aw3_desc:'3er lugar en competición CTF del bootcamp avanzado de ciberseguridad de INCIBE. Retos de análisis, exploits y respuesta a incidentes.',
+  aw4_title:'Ganadora — Full Stack Bootcamp Project',
+  aw4_desc:'Proyecto técnico más destacado del bootcamp, demostrando capacidades avanzadas en desarrollo y seguridad de aplicaciones web.',
+  aw5_title:'Ganadora — Mujeres TICs Bootcamp (SGH)',
+  aw5_desc:'Reconocida por el proyecto tecnológico más sobresaliente entre todas las participantes del programa.',
+  about_label:'Trayectoria',about_title:'Experiencia profesional',
+  tl1_role:'Advanced Cybersecurity Bootcamp',tl1_company:'INCIBE · La Mina Startup · Linares, Spain',
+  tl1_desc:'Bootcamp avanzado patrocinado por INCIBE. Proyecto EcoGuard DNS. 3er lugar en CTF final. Formación en SOC, análisis de amenazas y herramientas defensivas.',
+  tl2_role:'Full Stack Developer Bootcamp',tl2_company:'4Geeks Academy · Spain',
+  tl2_desc:'Desarrollo web full stack. Proyecto Art Vibes — ganadora del premio al mejor proyecto técnico. Aplicación de principios de seguridad en aplicaciones web.',
+  tl3_role:'Data Analyst',tl3_company:'Universidad Europea del Atlántico · Spain',
+  tl4_role:'Security Operations Center Analyst',tl4_company:'F2TC Cyber Security · Dominican Republic',
+  tl5_role:'Cybersecurity Program Internship (CICTE)',tl5_company:'Organization of American States (OAS) · USA',
+  tl6_role:'Higher Vocational Diploma — Information Security',tl6_company:'Instituto Tecnológico de las Américas · Dominican Republic',
+  tl6_desc:'Formación técnica superior en seguridad de la información. CTF nacional 3er lugar (2019). Premio Mujeres TICs (2017).',
+  labs_label:'Laboratorios',labs_title:'Proyectos prácticos',
+  lab1_desc:'Simulación de movimiento lateral y propagación de malware en red interna. Análisis de vectores de ataque y gaps de segmentación.',
+  lab2_desc:'Detección de dominios typosquatting con DNSTwist. Análisis de variaciones usadas en campañas de phishing.',
+  lab3_desc:'Campaña de phishing controlada con Gophish y exposición via Ngrok. Análisis de métricas y credential harvesting.',
+  lab4_desc:'Análisis de ataques SSH y comportamiento de ransomware en entorno controlado. Extracción de IOCs y respuesta a incidentes.',
+  lab_soon_title:'Próximamente',lab_soon_desc:'Nuevo laboratorio en desarrollo.',lab_soon_date:'En progreso',
+  skills_label:'Habilidades',skills_title:'Stack técnico',
+  sk1:'SOC & Incident Response',sk2:'Threat Intelligence',sk3:'Análisis & Forensics',sk4:'Lenguajes & Scripting',sk5:'Plataformas',sk6:'Idiomas',
+  lang1:'Español — Nativo',lang2:'Inglés — C2 (EF SET)',lang3:'Francés — Profesional',
+  certs_label:'Certificaciones',certs_title:'Certs & formación',
+  cert_progress:'En progreso',cert_progress_year:'En curso · 2026',
+  contact_label:'Contacto',
+  contact_text:'¿Buscas una SOC analyst con experiencia real y logros internacionales?',
+  contact_sub:'Disponible para SOC Analyst, Threat Intelligence o ciberseguridad defensiva. Abierta a trabajo en España y remoto.',
+  footer_copy:'© 2026 · Lisa Marie Moreno · Hosteado en GitHub Pages',
+  hr_text:'👋 ¿Eres de Recursos Humanos o estás buscando talento en ciberseguridad?',
+  hr_cta:'Ver datos de contacto →',
+  visitor_text:'Eres la visita número',
+},
+en:{
+  nav_awards:'Awards',nav_about:'Experience',nav_labs:'Labs',nav_skills:'Skills',nav_certs:'Certs',nav_contact:'Contact',
+  hero_eyebrow:'SOC Analyst · Cybersecurity · Spain',
+  hero_subtitle:'Cybersecurity Analyst with real SOC experience, SIEM monitoring, and incident investigation. OAS Cyberchallenge 2019 · INCIBE Bootcamp 2026 · CTF competitor.',
+  hero_cta1:'View projects →',hero_cta2:'Contact me',
+  awards_label:'Recognition',awards_title:'Key achievements',
+  aw1_title:'2nd Place — OAS International Cyberchallenge',
+  aw1_desc:'Outperformed international teams in a high-pressure CTF focused on incident defense, sponsored by the OAS. Cartagena, Colombia.',
+  aw2_title:'3rd Place — National CTF (Dominican Republic)',
+  aw2_desc:'Advanced challenges in ethical hacking, digital forensics and system exploitation at national level.',
+  aw3_title:'3rd Place — INCIBE Bootcamp CTF',
+  aw3_desc:'3rd place in the CTF competition of the advanced INCIBE cybersecurity bootcamp. Analysis, exploits and incident response challenges.',
+  aw4_title:'Winner — Full Stack Bootcamp Project',
+  aw4_desc:'Top-tier technical project of the bootcamp, demonstrating advanced capabilities in building and securing web applications.',
+  aw5_title:'Winner — Mujeres TICs Bootcamp (SGH)',
+  aw5_desc:'Recognized for the most outstanding technological project among all participants of the program.',
+  about_label:'Experience',about_title:'Professional background',
+  tl1_role:'Advanced Cybersecurity Bootcamp',tl1_company:'INCIBE · La Mina Startup · Linares, Spain',
+  tl1_desc:'Advanced bootcamp sponsored by INCIBE. EcoGuard DNS project. 3rd place in final CTF. Intensive training in SOC, threat analysis and defensive tools.',
+  tl2_role:'Full Stack Developer Bootcamp',tl2_company:'4Geeks Academy · Spain',
+  tl2_desc:'Full stack web development. Art Vibes project — winner of the best technical project award. Applied security principles in web applications.',
+  tl3_role:'Data Analyst',tl3_company:'Universidad Europea del Atlántico · Spain',
+  tl4_role:'Security Operations Center Analyst',tl4_company:'F2TC Cyber Security · Dominican Republic',
+  tl5_role:'Cybersecurity Program Internship (CICTE)',tl5_company:'Organization of American States (OAS) · USA',
+  tl6_role:'Higher Vocational Diploma — Information Security',tl6_company:'Instituto Tecnológico de las Américas · Dominican Republic',
+  tl6_desc:'Technical degree in information security. National CTF 3rd place (2019). Mujeres TICs Award (2017).',
+  labs_label:'Laboratories',labs_title:'Practical projects',
+  lab1_desc:'Simulation of lateral movement and malware propagation on internal network. Analysis of attack vectors and network segmentation gaps.',
+  lab2_desc:'Typosquatting domain detection with DNSTwist. Analysis of domain variations used in phishing campaigns.',
+  lab3_desc:'Controlled phishing campaign with Gophish via Ngrok. Open rate, click and credential harvesting metrics analysis.',
+  lab4_desc:'SSH attack and ransomware behavior analysis in controlled environment. IOC extraction and incident response.',
+  lab_soon_title:'Coming soon',lab_soon_desc:'New laboratory in development.',lab_soon_date:'In progress',
+  skills_label:'Skills',skills_title:'Technical stack',
+  sk1:'SOC & Incident Response',sk2:'Threat Intelligence',sk3:'Analysis & Forensics',sk4:'Languages & Scripting',sk5:'Platforms',sk6:'Spoken languages',
+  lang1:'Spanish — Native',lang2:'English — C2 (EF SET)',lang3:'French — Professional',
+  certs_label:'Certifications',certs_title:'Certs & training',
+  cert_progress:'In progress',cert_progress_year:'In progress · 2026',
+  contact_label:'Contact',
+  contact_text:'Looking for a SOC analyst with real-world experience and international achievements?',
+  contact_sub:'Available for SOC Analyst, Threat Intelligence or defensive cybersecurity roles. Open to Spain and remote.',
+  footer_copy:'© 2026 · Lisa Marie Moreno · Hosted on GitHub Pages',
+  hr_text:'👋 Are you from HR or looking for cybersecurity talent?',
+  hr_cta:'View contact details →',
+  visitor_text:"You're visitor number",
+},
+fr:{
+  nav_awards:'Récompenses',nav_about:'Expérience',nav_labs:'Labs',nav_skills:'Compétences',nav_certs:'Certs',nav_contact:'Contact',
+  hero_eyebrow:'Analyste SOC · Cybersécurité · Espagne',
+  hero_subtitle:'Analyste en cybersécurité avec une vraie expérience SOC, surveillance SIEM et investigation d\'incidents. OAS Cyberchallenge 2019 · INCIBE Bootcamp 2026 · Compétitrice CTF.',
+  hero_cta1:'Voir les projets →',hero_cta2:'Me contacter',
+  awards_label:'Distinctions',awards_title:'Réalisations clés',
+  aw1_title:'2e place — OAS International Cyberchallenge',
+  aw1_desc:'J\'ai surpassé des équipes internationales dans un CTF sous haute pression axé sur la défense d\'incidents, sponsorisé par l\'OEA. Carthagène, Colombie.',
+  aw2_title:'3e place — CTF National (Rép. Dominicaine)',
+  aw2_desc:'Défis avancés en ethical hacking, forensics numérique et exploitation de systèmes au niveau national.',
+  aw3_title:'3e place — CTF INCIBE Bootcamp',
+  aw3_desc:'3e place dans la compétition CTF du bootcamp avancé de cybersécurité d\'INCIBE.',
+  aw4_title:'Gagnante — Projet Full Stack Bootcamp',
+  aw4_desc:'Meilleur projet technique du bootcamp, démontrant des capacités avancées en développement et sécurité d\'applications web.',
+  aw5_title:'Gagnante — Bootcamp Mujeres TICs (SGH)',
+  aw5_desc:'Reconnue pour le projet technologique le plus remarquable parmi toutes les participantes du programme.',
+  about_label:'Parcours',about_title:'Expérience professionnelle',
+  tl1_role:'Bootcamp avancé en cybersécurité',tl1_company:'INCIBE · La Mina Startup · Linares, Espagne',
+  tl1_desc:'Bootcamp avancé sponsorisé par INCIBE. Projet EcoGuard DNS. 3e place au CTF final. Formation intensive SOC, analyse des menaces et outils défensifs.',
+  tl2_role:'Bootcamp Développeur Full Stack',tl2_company:'4Geeks Academy · Espagne',
+  tl2_desc:'Développement web full stack. Projet Art Vibes — lauréate du meilleur projet technique. Application des principes de sécurité dans le développement web.',
+  tl3_role:'Analyste de données',tl3_company:'Universidad Europea del Atlántico · Espagne',
+  tl4_role:'Analyste SOC',tl4_company:'F2TC Cyber Security · République Dominicaine',
+  tl5_role:'Stage Programme Cybersécurité (CICTE)',tl5_company:'Organisation des États Américains (OEA) · USA',
+  tl6_role:'BTS Sécurité de l\'Information',tl6_company:'Instituto Tecnológico de las Américas · Rép. Dominicaine',
+  tl6_desc:'Formation technique supérieure en sécurité de l\'information. CTF national 3e place (2019). Prix Mujeres TICs (2017).',
+  labs_label:'Laboratoires',labs_title:'Projets pratiques',
+  lab1_desc:'Simulation de mouvement latéral et propagation de malware sur réseau interne. Analyse des vecteurs d\'attaque et lacunes de segmentation.',
+  lab2_desc:'Détection de domaines typosquatting avec DNSTwist. Analyse des variations utilisées dans les campagnes de phishing.',
+  lab3_desc:'Campagne de phishing contrôlée avec Gophish via Ngrok. Analyse des métriques d\'ouverture, clics et collecte d\'identifiants.',
+  lab4_desc:'Analyse des attaques SSH et comportement de ransomware en environnement contrôlé. Extraction d\'IOCs et réponse aux incidents.',
+  lab_soon_title:'Bientôt disponible',lab_soon_desc:'Nouveau laboratoire en développement.',lab_soon_date:'En cours',
+  skills_label:'Compétences',skills_title:'Stack technique',
+  sk1:'SOC & Réponse aux incidents',sk2:'Threat Intelligence',sk3:'Analyse & Forensics',sk4:'Langages & Scripting',sk5:'Plateformes',sk6:'Langues parlées',
+  lang1:'Espagnol — Natif',lang2:'Anglais — C2 (EF SET)',lang3:'Français — Professionnel',
+  certs_label:'Certifications',certs_title:'Certs & formation',
+  cert_progress:'En cours',cert_progress_year:'En cours · 2026',
+  contact_label:'Contact',
+  contact_text:'Vous cherchez une analyste SOC avec une vraie expérience internationale ?',
+  contact_sub:'Disponible pour analyste SOC, Threat Intelligence ou cybersécurité défensive. Ouverte au travail en Espagne et en télétravail.',
+  footer_copy:'© 2026 · Lisa Marie Moreno · Hébergé sur GitHub Pages',
+  hr_text:'👋 Vous êtes des RH ou vous cherchez des talents en cybersécurité ?',
+  hr_cta:'Voir les coordonnées →',
+  visitor_text:'Vous êtes le visiteur numéro',
+}
 };
 
-function setLang(lang) {
-  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent === lang.toUpperCase()));
+let lang = 'es';
+
+function setLang(l) {
+  lang = l;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent === l.toUpperCase()));
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    const v = i18n[lang][el.getAttribute('data-i18n')];
-    if (v) el.textContent = v;
+    const v = T[l][el.getAttribute('data-i18n')];
+    if(v) el.textContent = v;
   });
-  document.documentElement.lang = lang;
+  document.documentElement.lang = l;
+  // update HR banner text
+  const hrText = document.getElementById('hr-text');
+  const hrCta = document.getElementById('hr-cta');
+  if(hrText) hrText.textContent = T[l].hr_text;
+  if(hrCta) hrCta.textContent = T[l].hr_cta;
+  // update visitor text
+  updateVisitorText();
 }
 
+// ─── VISITOR COUNTER ───────────────────────────────────────────────────────────
+// Uses countapi.xyz — free, no signup, persists across sessions
+// Change 'lisa-moreno-portfolio' to your own unique namespace
+let visitorCount = null;
+
+async function initVisitor() {
+  try {
+    const r = await fetch('https://api.countapi.xyz/hit/lisa-moreno-portfolio/visits');
+    const d = await r.json();
+    visitorCount = d.value;
+    updateVisitorText();
+  } catch(e) {
+    // If countapi is down, show a static message
+    document.getElementById('visitor-text').innerHTML =
+      '<span style="color:var(--text3)">Portfolio · Lisa Marie Moreno · SOC Analyst</span>';
+  }
+}
+
+function updateVisitorText() {
+  if(visitorCount === null) return;
+  const el = document.getElementById('visitor-text');
+  const label = T[lang].visitor_text || 'Eres la visita número';
+  el.innerHTML = label + ' <span>' + visitorCount.toLocaleString() + '</span> ✦';
+}
+
+initVisitor();
+
+// ─── HR BANNER ─────────────────────────────────────────────────────────────────
+// Shows after 4 seconds if not dismissed this session
+function showHRBanner() {
+  if(sessionStorage.getItem('hr_banner_closed')) return;
+  const banner = document.getElementById('hr-banner');
+  banner.classList.add('show');
+  // Adjust footer padding so content isn't hidden behind banner
+  document.querySelector('footer').style.paddingBottom = '80px';
+}
+setTimeout(showHRBanner, 4000);
+document.querySelector('.hr-banner-close').addEventListener('click', () => {
+  sessionStorage.setItem('hr_banner_closed', '1');
+  document.querySelector('footer').style.paddingBottom = '';
+});
+
+// ─── SCROLL ANIMATIONS ─────────────────────────────────────────────────────────
 const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.08 });
 document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+// ─── NAV TOP OFFSET (visitor bar) ──────────────────────────────────────────────
+// Keep nav below the visitor bar
+const vbar = document.getElementById('visitor-bar');
+const navEl = document.querySelector('nav');
+function syncNavTop() {
+  navEl.style.top = vbar.offsetHeight + 'px';
+}
+syncNavTop();
+window.addEventListener('resize', syncNavTop);
 </script>
 </body>
 </html>
