@@ -241,7 +241,7 @@ footer{border-top:1px solid var(--border);padding:28px 0 100px;display:flex;just
   <div class="hero-badges">
     <span class="badge bg">◉ SOC Operations</span>
     <span class="badge br">◈ Malware Analysis</span>
-    <span class="badge bb">◆ SIEM · Splunk · Chronicle</span>
+    <span class="badge bb">◆ SIEM · Splunk · Wazuh</span>
     <span class="badge ba">◇ MITRE ATT&amp;CK</span>
     <span class="badge bp">◉ OSINT</span>
     <span class="badge bgold">★ CTF Competitor</span>
@@ -261,9 +261,9 @@ footer{border-top:1px solid var(--border);padding:28px 0 100px;display:flex;just
       <div style="margin-top:6px"><span class="tp">lisa@kali:~$</span> <span class="tc">cat highlights.txt</span></div>
       <div class="to">2nd Place · OAS International Cyberchallenge (2019)</div>
       <div class="to">SOC Analyst @ F2TC · OAS/CICTE Cybersecurity Intern</div>
-      <div class="to">INCIBE Advanced Bootcamp 2026 · Fortinet NSE 1-2-3</div>
+      <div class="to">INCIBE Advanced Bootcamp 2026 · 3rd place CTF</div>
       <div style="margin-top:6px"><span class="tp">lisa@kali:~$</span> <span class="tc">ls labs/</span></div>
-      <div class="to">infection_monkey/ &nbsp;dnstwist/ &nbsp;gophish_ngrok/ &nbsp;ssh_ransomware/</div>
+      <div class="to">phishing_amazon/  gophish_ngrok/  edr_vs_av/  ransomware_lab/</div>
       <div style="margin-top:6px"><span class="tp">lisa@kali:~$</span> <span class="tcursor"></span></div>
     </div>
   </div>
@@ -313,7 +313,6 @@ footer{border-top:1px solid var(--border);padding:28px 0 100px;display:flex;just
   <h2 class="section-title" data-i18n="s_exp_title">Experiencia <em>profesional</em></h2>
   <div class="timeline">
 
-    <!-- INCIBE 2026 -->
     <div class="tl-item active">
       <div class="tl-date">2026 — PRESENTE</div>
       <div class="tl-role" data-i18n="exp1_role">Bootcamp Avanzado de Ciberseguridad</div>
@@ -321,7 +320,6 @@ footer{border-top:1px solid var(--border);padding:28px 0 100px;display:flex;just
       <div class="tl-desc" data-i18n="exp1_desc">Formación intensiva en operaciones SOC, análisis de amenazas y herramientas de defensa. Proyecto final: EcoGuard DNS. 3er lugar en CTF de cierre de programa.</div>
     </div>
 
-    <!-- 4GEEKS 2024-2025 -->
     <div class="tl-item edu">
       <div class="tl-date">2024 — 2025</div>
       <div class="tl-role" data-i18n="exp2_role">Bootcamp Desarrollo Web Full Stack</div>
@@ -329,7 +327,6 @@ footer{border-top:1px solid var(--border);padding:28px 0 100px;display:flex;just
       <div class="tl-desc" data-i18n="exp2_desc">Proyecto Art Vibes — ganadora del premio al mejor proyecto técnico del programa. Aplicación de principios de seguridad en el ciclo de desarrollo.</div>
     </div>
 
-    <!-- INDEPENDIENTE 2022-2024 -->
     <div class="tl-item research">
       <div class="tl-date">2022 — 2024</div>
       <div class="tl-highlight">
@@ -348,7 +345,6 @@ footer{border-top:1px solid var(--border);padding:28px 0 100px;display:flex;just
       </div>
     </div>
 
-    <!-- DATA ANALYST 2022 -->
     <div class="tl-item">
       <div class="tl-date">Ene 2022 — Sep 2022</div>
       <div class="tl-role" data-i18n="exp4_role">Analista de Datos</div>
@@ -362,7 +358,6 @@ footer{border-top:1px solid var(--border);padding:28px 0 100px;display:flex;just
       </div>
     </div>
 
-    <!-- F2TC SOC 2021 -->
     <div class="tl-item active">
       <div class="tl-date">Mar 2021 — Dic 2021</div>
       <div class="tl-role" data-i18n="exp5_role">Analista de Centro de Operaciones de Seguridad</div>
@@ -376,7 +371,6 @@ footer{border-top:1px solid var(--border);padding:28px 0 100px;display:flex;just
       </div>
     </div>
 
-    <!-- OAS 2020-2021 -->
     <div class="tl-item active">
       <div class="tl-date">Nov 2020 — Abr 2021</div>
       <div class="tl-role" data-i18n="exp6_role">Prácticas — Programa de Ciberseguridad CICTE</div>
@@ -391,7 +385,6 @@ footer{border-top:1px solid var(--border);padding:28px 0 100px;display:flex;just
       </div>
     </div>
 
-    <!-- ITES 2017-2020 -->
     <div class="tl-item edu">
       <div class="tl-date">2017 — 2020</div>
       <div class="tl-role" data-i18n="exp7_role">Técnico Superior en Seguridad Informática</div>
@@ -402,21 +395,21 @@ footer{border-top:1px solid var(--border);padding:28px 0 100px;display:flex;just
   </div>
 </section>
 
-<!-- LABS -->
+<!-- LABS — ACTUALIZADO CON 5 PROYECTOS -->
 <section id="labs" class="fade-in">
   <div class="section-label" data-i18n="s_labs_label">Laboratorios</div>
   <h2 class="section-title" data-i18n="s_labs_title">Proyectos <em>reales y prácticos</em></h2>
   <div class="labs-grid">
-    
+
     <div class="lab-card" style="--accent:#ffb84d">
       <div class="lab-num">RESEARCH_01</div>
       <div class="lab-icon" style="background:var(--amber-dim)">🛡️</div>
-      <div class="lab-title">Análisis Phishing: Amazon ES</div>
-      <div class="lab-desc">Disección de un ataque real que evadió SPF/DKIM/DMARC. Análisis de homógrafos y evasión de filtros mediante barras invertidas.</div>
+      <div class="lab-title" data-i18n="lab1_title">Análisis Phishing: Amazon ES</div>
+      <div class="lab-desc" data-i18n="lab1_desc">Disección de un ataque real que evadió SPF/DKIM/DMARC. Homoglyph attack, Unicode evasion y rastreo de víctimas en urlscan.io. Campaña activa de 13 días.</div>
       <div class="lab-tags">
         <span class="badge ba lab-tag">Threat Analysis</span>
-        <span class="badge bg lab-tag">Evasion Techniques</span>
-        <span class="badge bb lab-tag">Blue Team</span>
+        <span class="badge bg lab-tag">Email Forensics</span>
+        <span class="badge bb lab-tag">MITRE ATT&amp;CK</span>
       </div>
       <div class="lab-meta">
         <span class="lab-date">2026</span>
@@ -427,8 +420,8 @@ footer{border-top:1px solid var(--border);padding:28px 0 100px;display:flex;just
     <div class="lab-card" style="--accent:#5b9cf6">
       <div class="lab-num">LAB_01</div>
       <div class="lab-icon" style="background:var(--blue-dim)">🎣</div>
-      <div class="lab-title">Simulación Gophish + Ngrok</div>
-      <div class="lab-desc">Despliegue de campaña de phishing controlada. Configuración de túneles HTTPS y recolección de métricas en entorno de laboratorio.</div>
+      <div class="lab-title" data-i18n="lab2_title">Simulación Gophish + Ngrok</div>
+      <div class="lab-desc" data-i18n="lab2_desc">Campaña de phishing controlada con Gophish via túnel Ngrok. Análisis de métricas de apertura, clicks y credential harvesting en sandbox.</div>
       <div class="lab-tags">
         <span class="badge bb lab-tag">Phishing Simulation</span>
         <span class="badge bp lab-tag">Social Engineering</span>
@@ -440,17 +433,51 @@ footer{border-top:1px solid var(--border);padding:28px 0 100px;display:flex;just
       </div>
     </div>
 
-    <div class="lab-card" style="--accent:#a78bfa; opacity:.8">
+    <!-- NUEVO: EDR vs Antivirus -->
+    <div class="lab-card" style="--accent:#00e5a0">
       <div class="lab-num">LAB_02</div>
-      <div class="lab-icon" style="background:var(--purple-dim)">🔐</div>
-      <div class="lab-title">SSH Ransomware Analysis</div>
-      <div class="lab-desc">Investigación de ataques de fuerza bruta SSH y ejecución de ransomware en sandbox. Próximamente el reporte técnico.</div>
+      <div class="lab-icon" style="background:var(--green-dim)">🔬</div>
+      <div class="lab-title" data-i18n="lab3_title">EDR vs Antivirus — Lab Test</div>
+      <div class="lab-desc" data-i18n="lab3_desc">Mismo ataque, tres escenarios: antivirus solo, EDR activo, EDR solo. Infection Monkey contra Windows 10 con Wazuh + Trend Micro Vision One. El antivirus falló. El EDR lo cortó antes de ejecutarse.</div>
       <div class="lab-tags">
-        <span class="badge bp lab-tag">Ransomware</span>
-        <span class="badge br lab-tag">Forensics</span>
+        <span class="badge bg lab-tag">EDR/XDR</span>
+        <span class="badge ba lab-tag">Wazuh SIEM</span>
+        <span class="badge br lab-tag">Infection Monkey</span>
       </div>
       <div class="lab-meta">
-        <span class="lab-date">En progreso</span>
+        <span class="lab-date">2026</span>
+        <a href="https://github.com/lisamorenoit/EDRvsAntivurs-LabTest" target="_blank" class="lab-link">ver repo →</a>
+      </div>
+    </div>
+
+    <!-- NUEVO: Ransomware Lab -->
+    <div class="lab-card" style="--accent:#ff4c6a">
+      <div class="lab-num">LAB_03</div>
+      <div class="lab-icon" style="background:var(--red-dim)">💀</div>
+      <div class="lab-title" data-i18n="lab4_title">Ransomware Lab — SIEM vs Ataque Real</div>
+      <div class="lab-desc" data-i18n="lab4_desc">Simulación de ransomware con Infection Monkey en red interna. Wazuh detectó actividad C2 y alertó via Slack en tiempo real — pero el cifrado siguió. 1.734 eventos. VM crasheada. Snapshot que lo salvó todo.</div>
+      <div class="lab-tags">
+        <span class="badge br lab-tag">Ransomware</span>
+        <span class="badge bg lab-tag">Wazuh SIEM</span>
+        <span class="badge ba lab-tag">Incident Response</span>
+      </div>
+      <div class="lab-meta">
+        <span class="lab-date">2026</span>
+        <a href="https://github.com/lisamorenoit/Ramsomware-LabTest" target="_blank" class="lab-link">ver repo →</a>
+      </div>
+    </div>
+
+    <div class="lab-card" style="--accent:#a78bfa; opacity:.85">
+      <div class="lab-num">LAB_04</div>
+      <div class="lab-icon" style="background:var(--purple-dim)">🔮</div>
+      <div class="lab-title" data-i18n="lab5_title">Próximo lab</div>
+      <div class="lab-desc" data-i18n="lab5_desc">Active Directory + movimiento lateral + integración SOAR. En construcción.</div>
+      <div class="lab-tags">
+        <span class="badge bp lab-tag">Active Directory</span>
+        <span class="badge bg lab-tag">SOAR</span>
+      </div>
+      <div class="lab-meta">
+        <span class="lab-date" data-i18n="lab_soon_date">En progreso</span>
         <span style="font-size:11px;color:var(--text3)">···</span>
       </div>
     </div>
@@ -465,7 +492,7 @@ footer{border-top:1px solid var(--border);padding:28px 0 100px;display:flex;just
   <div class="skills-grid">
     <div class="skill-group">
       <div class="skill-group-title" data-i18n="sk1">SOC &amp; Respuesta</div>
-      <div class="skill-item"><span class="sdot"></span>SIEM: Splunk &amp; Chronicle</div>
+      <div class="skill-item"><span class="sdot"></span>SIEM: Wazuh · Splunk · ELK</div>
       <div class="skill-item"><span class="sdot"></span>Log Analysis</div>
       <div class="skill-item"><span class="sdot"></span>Alert Triage</div>
       <div class="skill-item"><span class="sdot"></span>Incident Response</div>
@@ -499,7 +526,7 @@ footer{border-top:1px solid var(--border);padding:28px 0 100px;display:flex;just
       <div class="skill-group-title" data-i18n="sk5">Plataformas</div>
       <div class="skill-item"><span class="sdot b"></span>Kali Linux</div>
       <div class="skill-item"><span class="sdot b"></span>Linux / Unix Admin</div>
-      <div class="skill-item"><span class="sdot b"></span>Wazuh SIEM</div>
+      <div class="skill-item"><span class="sdot b"></span>Trend Micro Vision One</div>
       <div class="skill-item"><span class="sdot b"></span>Infection Monkey · Hydra</div>
       <div class="skill-item"><span class="sdot b"></span>LetsDefend SOC</div>
     </div>
@@ -512,7 +539,7 @@ footer{border-top:1px solid var(--border);padding:28px 0 100px;display:flex;just
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
+<!-- CERTIFICATIONS — Edutin corregido -->
 <section id="certs" class="fade-in">
   <div class="section-label" data-i18n="s_certs_label">Certificaciones</div>
   <h2 class="section-title" data-i18n="s_certs_title">Certs &amp; <em>formación</em></h2>
@@ -537,7 +564,7 @@ footer{border-top:1px solid var(--border);padding:28px 0 100px;display:flex;just
     <a href="https://cert.efset.org/en/MipGc9" target="_blank" class="cert-card">
       <div class="cert-name">EF SET English Certificate — C1 Advanced</div>
       <div class="cert-issuer">EF Education First</div>
-      <div class="cert-foot"><span class="cert-year">2025</span><span class="cbadge done" data-i18n="cert_done">Obtenida</span></div>
+      <div class="cert-foot"><span class="cert-year">2026</span><span class="cbadge done" data-i18n="cert_done">Obtenida</span></div>
       <div class="cert-link-hint" data-i18n="cert_verify">Ver certificado →</div>
     </a>
     <a href="#" class="cert-card">
@@ -550,15 +577,19 @@ footer{border-top:1px solid var(--border);padding:28px 0 100px;display:flex;just
       <div class="cert-issuer">Huawei</div>
       <div class="cert-foot"><span class="cert-year">2020</span><span class="cbadge done" data-i18n="cert_done">Obtenida</span></div>
     </a>
-    <!-- EN PROGRESO -->
+    <div class="cert-card ip">
+      <div class="cert-name">CompTIA Security+</div>
+      <div class="cert-issuer">CompTIA</div>
+      <div class="cert-foot"><span class="cert-year" data-i18n="cert_wip_year">En curso · 2026</span><span class="cbadge prog" data-i18n="cert_wip">En progreso</span></div>
+    </div>
     <div class="cert-card ip">
       <div class="cert-name">Google Cybersecurity Professional Certificate</div>
       <div class="cert-issuer">Google · Coursera</div>
       <div class="cert-foot"><span class="cert-year" data-i18n="cert_wip_year">En curso · 2026</span><span class="cbadge prog" data-i18n="cert_wip">En progreso</span></div>
     </div>
     <div class="cert-card ip">
-      <div class="cert-name">AI course for cybersecurity</div>
-      <div class="cert-issuer">Edutin Academy Edutin Academy</div>
+      <div class="cert-name">AI for Cybersecurity</div>
+      <div class="cert-issuer">Edutin Academy</div>
       <div class="cert-foot"><span class="cert-year" data-i18n="cert_wip_year">En curso · 2026</span><span class="cbadge prog" data-i18n="cert_wip">En progreso</span></div>
     </div>
   </div>
@@ -568,7 +599,6 @@ footer{border-top:1px solid var(--border);padding:28px 0 100px;display:flex;just
 <section id="contact" class="fade-in">
   <div class="section-label" data-i18n="s_contact_label">Contacto</div>
   <h2 class="section-title" data-i18n="s_contact_title">¿Hablamos?</h2>
-
   <div class="contact-wrap">
     <div>
       <div class="contact-headline" data-i18n="contact_headline">¿Buscas una SOC analyst con experiencia real e historial internacional?</div>
@@ -580,18 +610,15 @@ footer{border-top:1px solid var(--border);padding:28px 0 100px;display:flex;just
         <a href="https://linkedin.com/in/lisa-marie-moreno" class="clink" target="_blank">
           <span class="clink-icon">in</span><span>linkedin.com/in/lisa-marie-moreno</span>
         </a>
-        <a href="https://github.com/lisamorenoit" class="clink" target="_blank" id="github-link">
+        <a href="https://github.com/lisamorenoit" class="clink" target="_blank">
           <span class="clink-icon">&lt;/&gt;</span><span>github.com/lisamorenoit</span>
         </a>
       </div>
     </div>
-
-    <!-- CONTACT FORM via Formspree -->
     <div class="contact-form">
       <div class="form-title" data-i18n="form_title">Envíame un mensaje</div>
       <div id="form-success" class="form-success" data-i18n="form_success">✓ Mensaje enviado — te respondo en breve.</div>
       <form id="contact-form" action="https://formspree.io/f/xdapqolw" method="POST">
-        <!-- IMPORTANTE: reemplaza YOUR_FORM_ID con tu ID de Formspree (gratis en formspree.io) -->
         <div class="form-grid">
           <div class="form-field">
             <label class="form-label" data-i18n="form_name">Nombre</label>
@@ -625,7 +652,7 @@ footer{border-top:1px solid var(--border);padding:28px 0 100px;display:flex;just
 </main>
 
 <script>
-// ── i18n DATA ──────────────────────────────────────────────────────────────────
+// ── i18n ───────────────────────────────────────────────────────────────────────
 const T={
 es:{
   nav_awards:'Logros',nav_about:'Experiencia',nav_labs:'Labs',nav_skills:'Skills',nav_certs:'Certs',nav_contact:'Contacto',
@@ -633,21 +660,14 @@ es:{
   hero_subtitle:'Analista de ciberseguridad con experiencia real en SOC, SIEM y respuesta a incidentes. 2º lugar OAS Cyberchallenge 2019 · INCIBE Bootcamp 2026 · Competidora CTF.',
   hero_cta1:'Ver proyectos →',hero_cta2:'Contactar',
   s_awards_label:'Reconocimientos',s_awards_title:'Logros destacados',
-  aw1_title:'2º Lugar — OAS International Cyberchallenge',
-  aw1_desc:'Superé equipos internacionales en CTF de alta presión sobre defensa de incidentes, patrocinada por la OEA. Cartagena, Colombia.',
-  aw2_title:'3er Lugar — CTF Nacional (Rep. Dominicana)',
-  aw2_desc:'Retos avanzados de ethical hacking, digital forensics y explotación de sistemas a nivel nacional.',
-  aw3_title:'3er Lugar — CTF INCIBE Bootcamp 2026',
-  aw3_desc:'3er lugar en la competición CTF del bootcamp avanzado de ciberseguridad de INCIBE. Retos de análisis, exploits y respuesta a incidentes.',
-  aw4_title:'Ganadora — Mejor Proyecto Full Stack',
-  aw4_desc:'Mejor proyecto técnico del bootcamp. Demostración de capacidades avanzadas en desarrollo y seguridad de aplicaciones web.',
-  aw5_title:'Ganadora — Mujeres TICs (SGH)',
-  aw5_desc:'Proyecto tecnológico más sobresaliente entre todas las participantes del programa de formación.',
+  aw1_title:'2º Lugar — OAS International Cyberchallenge',aw1_desc:'Superé equipos internacionales en CTF de alta presión sobre defensa de incidentes, patrocinada por la OEA. Cartagena, Colombia.',
+  aw2_title:'3er Lugar — CTF Nacional (Rep. Dominicana)',aw2_desc:'Retos avanzados de ethical hacking, digital forensics y explotación de sistemas a nivel nacional.',
+  aw3_title:'3er Lugar — CTF INCIBE Bootcamp 2026',aw3_desc:'3er lugar en la competición CTF del bootcamp avanzado de ciberseguridad de INCIBE. Retos de análisis, exploits y respuesta a incidentes.',
+  aw4_title:'Ganadora — Mejor Proyecto Full Stack',aw4_desc:'Mejor proyecto técnico del bootcamp. Demostración de capacidades avanzadas en desarrollo y seguridad de aplicaciones web.',
+  aw5_title:'Ganadora — Mujeres TICs (SGH)',aw5_desc:'Proyecto tecnológico más sobresaliente entre todas las participantes del programa de formación.',
   s_exp_label:'Trayectoria',s_exp_title:'Experiencia profesional',
-  exp1_role:'Bootcamp Avanzado de Ciberseguridad',exp1_co:'INCIBE · La Mina Startup · Linares, España',
-  exp1_desc:'Formación intensiva en operaciones SOC, análisis de amenazas y herramientas de defensa. Proyecto final: EcoGuard DNS. 3er lugar en CTF de cierre de programa.',
-  exp2_role:'Bootcamp Desarrollo Web Full Stack',exp2_co:'4Geeks Academy · España',
-  exp2_desc:'Proyecto Art Vibes — ganadora del premio al mejor proyecto técnico del programa. Aplicación de principios de seguridad en el ciclo de desarrollo.',
+  exp1_role:'Bootcamp Avanzado de Ciberseguridad',exp1_co:'INCIBE · La Mina Startup · Linares, España',exp1_desc:'Formación intensiva en operaciones SOC, análisis de amenazas y herramientas de defensa. Proyecto final: EcoGuard DNS. 3er lugar en CTF de cierre de programa.',
+  exp2_role:'Bootcamp Desarrollo Web Full Stack',exp2_co:'4Geeks Academy · España',exp2_desc:'Proyecto Art Vibes — ganadora del premio al mejor proyecto técnico del programa.',
   exp3_role:'Investigadora Independiente de Ciberseguridad',exp3_co:'Proyectos personales · Lab independiente · España',
   exp3_intro:'Construcción de infraestructura propia de ciberseguridad y desarrollo de capacidades técnicas avanzadas en operaciones de defensa.',
   exp3_milestones_label:'HITOS TÉCNICOS',
@@ -656,26 +676,19 @@ es:{
   exp3_b3:'Implementación y ajuste de reglas en Wazuh (SIEM), integración API VirusTotal y automatización de alertas via Slack',
   exp3_b4:'Práctica continua en CTF: análisis de vulnerabilidades, escalada de privilegios y forense digital',
   exp4_role:'Analista de Datos',exp4_co:'Universidad Europea del Atlántico · España',
-  exp4_b1:'Creación de reportes y dashboards en Google Data Studio para múltiples departamentos',
-  exp4_b2:'Extracción y análisis de datos desde bases de datos SQL',
-  exp4_b3:'Automatización de procesos de reporting periódico para mejorar la eficiencia operativa',
-  exp5_role:'Analista de Centro de Operaciones de Seguridad (SOC)',exp5_co:'F2TC Cyber Security · República Dominicana',
-  exp5_b1:'Monitoreo en tiempo real de alertas de seguridad con herramientas SIEM',
-  exp5_b2:'Investigación y triage de incidentes de seguridad de nivel bajo y medio',
-  exp5_b3:'Escalada de amenazas críticas a equipos de respuesta a incidentes',
+  exp4_b1:'Creación de reportes y dashboards en Google Data Studio',exp4_b2:'Extracción y análisis de datos desde bases de datos SQL',exp4_b3:'Automatización de procesos de reporting periódico',
+  exp5_role:'Analista SOC',exp5_co:'F2TC Cyber Security · República Dominicana',
+  exp5_b1:'Monitoreo en tiempo real de alertas de seguridad con herramientas SIEM',exp5_b2:'Investigación y triage de incidentes de nivel bajo y medio',exp5_b3:'Escalada de amenazas críticas a equipos de respuesta a incidentes',
   exp6_role:'Prácticas — Programa de Ciberseguridad CICTE',exp6_co:'Organización de Estados Americanos (OEA) · USA',
-  exp6_b1:'Investigación de amenazas y tendencias en ciberseguridad para Latinoamérica y el Caribe',
-  exp6_b2:'Análisis de riesgos y desarrollo de matrices de riesgo para proyectos regionales',
-  exp6_b3:'Apoyo en implementación de programas de ciberseguridad en Iberoamérica',
-  exp6_b4:'Elaboración de informes técnicos y ejecutivos de ciberseguridad',
-  exp7_role:'Técnico Superior en Seguridad Informática',exp7_co:'Instituto Tecnológico de las Américas · Rep. Dominicana',
-  exp7_desc:'Formación técnica superior en seguridad de la información. CTF nacional 3er lugar (2019). Premio Mujeres TICs (2017).',
+  exp6_b1:'Investigación de amenazas para Latinoamérica y el Caribe',exp6_b2:'Análisis de riesgos y matrices de riesgo para proyectos regionales',exp6_b3:'Apoyo en implementación de programas de ciberseguridad en Iberoamérica',exp6_b4:'Elaboración de informes técnicos y ejecutivos',
+  exp7_role:'Técnico Superior en Seguridad Informática',exp7_co:'Instituto Tecnológico de las Américas · Rep. Dominicana',exp7_desc:'Formación técnica superior en seguridad de la información. CTF nacional 3er lugar (2019). Premio Mujeres TICs (2017).',
   s_labs_label:'Laboratorios',s_labs_title:'Proyectos prácticos',
-  lab1_desc:'Simulación de movimiento lateral y propagación de malware en red interna. Análisis de vectores de ataque y gaps de segmentación.',
-  lab2_desc:'Detección de dominios typosquatting. Análisis de variaciones usadas en phishing: homoglyphs, transposición de caracteres y bitsquatting.',
-  lab3_desc:'Campaña de phishing controlada con Gophish via Ngrok. Análisis de métricas de apertura, clicks y credential harvesting en sandbox.',
-  lab4_desc:'Análisis de ataques SSH y comportamiento de ransomware en entorno controlado. Extracción de IOCs y respuesta a incidentes.',
-  lab_writeup:'writeup →',lab_soon:'Próximamente',lab_soon_desc:'Nuevo laboratorio en desarrollo.',lab_soon_date:'En progreso',
+  lab1_title:'Análisis Phishing: Amazon ES',lab1_desc:'Disección de un ataque real que evadió SPF/DKIM/DMARC. Homoglyph attack, Unicode evasion y rastreo de víctimas en urlscan.io.',
+  lab2_title:'Simulación Gophish + Ngrok',lab2_desc:'Campaña de phishing controlada con Gophish via túnel Ngrok. Análisis de métricas de apertura, clicks y credential harvesting.',
+  lab3_title:'EDR vs Antivirus — Lab Test',lab3_desc:'Mismo ataque, tres escenarios: antivirus solo, EDR activo, EDR solo. Infection Monkey vs Windows 10 con Wazuh + Trend Micro Vision One. El antivirus falló. El EDR lo cortó antes de ejecutarse.',
+  lab4_title:'Ransomware Lab — SIEM vs Ataque Real',lab4_desc:'Simulación de ransomware con Infection Monkey. Wazuh detectó actividad C2 y alertó via Slack — pero el cifrado siguió. 1.734 eventos. VM crasheada. Snapshot que lo salvó todo.',
+  lab5_title:'Próximo lab',lab5_desc:'Active Directory + movimiento lateral + integración SOAR. En construcción.',
+  lab_soon_date:'En progreso',
   s_skills_label:'Habilidades',s_skills_title:'Stack técnico',
   sk1:'SOC & Respuesta',sk2:'Threat Intelligence',sk3:'Análisis & Forensics',sk4:'Lenguajes & Scripting',sk5:'Plataformas',sk6:'Idiomas',
   lang1:'Español — Nativo',lang2:'Inglés — Bilingüe (C1 Advanced)',lang3:'Francés — Nociones',
@@ -694,52 +707,38 @@ es:{
 en:{
   nav_awards:'Awards',nav_about:'Experience',nav_labs:'Labs',nav_skills:'Skills',nav_certs:'Certs',nav_contact:'Contact',
   hero_eyebrow:'SOC Analyst · Cybersecurity · Spain',
-  hero_subtitle:'Cybersecurity Analyst with real SOC experience, SIEM monitoring and incident response. 2nd place OAS Cyberchallenge 2019 · INCIBE Bootcamp 2026 · CTF competitor.',
+  hero_subtitle:'Cybersecurity Analyst with real SOC experience, SIEM and incident response. 2nd place OAS Cyberchallenge 2019 · INCIBE Bootcamp 2026 · CTF competitor.',
   hero_cta1:'View projects →',hero_cta2:'Contact me',
   s_awards_label:'Recognition',s_awards_title:'Key achievements',
-  aw1_title:'2nd Place — OAS International Cyberchallenge',
-  aw1_desc:'Outperformed international teams in a high-pressure CTF focused on incident defense, sponsored by the OAS. Cartagena, Colombia.',
-  aw2_title:'3rd Place — National CTF (Dominican Republic)',
-  aw2_desc:'Advanced challenges in ethical hacking, digital forensics and system exploitation at national level.',
-  aw3_title:'3rd Place — INCIBE Bootcamp CTF 2026',
-  aw3_desc:'3rd place in the CTF competition of the advanced INCIBE cybersecurity bootcamp. Analysis, exploits and incident response challenges.',
-  aw4_title:'Winner — Best Full Stack Project',
-  aw4_desc:'Top-tier technical project of the bootcamp, demonstrating advanced capabilities in building and securing web applications.',
-  aw5_title:'Winner — Mujeres TICs Bootcamp (SGH)',
-  aw5_desc:'Recognized for the most outstanding technological project among all participants of the program.',
+  aw1_title:'2nd Place — OAS International Cyberchallenge',aw1_desc:'Outperformed international teams in a high-pressure incident defense CTF, sponsored by the OAS. Cartagena, Colombia.',
+  aw2_title:'3rd Place — National CTF (Dominican Republic)',aw2_desc:'Advanced challenges in ethical hacking, digital forensics and system exploitation at national level.',
+  aw3_title:'3rd Place — INCIBE Bootcamp CTF 2026',aw3_desc:'3rd place in the CTF of the INCIBE advanced cybersecurity bootcamp. Analysis, exploits and incident response challenges.',
+  aw4_title:'Winner — Best Full Stack Project',aw4_desc:'Top technical project of the bootcamp, demonstrating advanced capabilities in building and securing web applications.',
+  aw5_title:'Winner — Mujeres TICs Bootcamp (SGH)',aw5_desc:'Recognized for the most outstanding technological project among all participants.',
   s_exp_label:'Experience',s_exp_title:'Professional background',
-  exp1_role:'Advanced Cybersecurity Bootcamp',exp1_co:'INCIBE · La Mina Startup · Linares, Spain',
-  exp1_desc:'Intensive training in SOC operations, threat analysis and defensive tools. Final project: EcoGuard DNS. 3rd place in closing CTF competition.',
-  exp2_role:'Full Stack Web Development Bootcamp',exp2_co:'4Geeks Academy · Spain',
-  exp2_desc:'Art Vibes project — winner of the best technical project award. Applied security principles throughout the development lifecycle.',
+  exp1_role:'Advanced Cybersecurity Bootcamp',exp1_co:'INCIBE · La Mina Startup · Linares, Spain',exp1_desc:'Intensive SOC operations, threat analysis and defensive tools training. Final project: EcoGuard DNS. 3rd place in closing CTF.',
+  exp2_role:'Full Stack Web Development Bootcamp',exp2_co:'4Geeks Academy · Spain',exp2_desc:'Art Vibes project — winner of best technical project award.',
   exp3_role:'Independent Cybersecurity Researcher',exp3_co:'Personal projects · Independent lab · Spain',
-  exp3_intro:'Built a personal cybersecurity infrastructure and developed advanced technical capabilities in defensive operations.',
+  exp3_intro:'Built personal cybersecurity infrastructure and developed advanced technical capabilities in defensive operations.',
   exp3_milestones_label:'TECHNICAL MILESTONES',
-  exp3_b1:'Virtualized lab architecture for attack simulation and defense on hybrid networks (Windows/Linux)',
+  exp3_b1:'Virtualized lab for attack simulation and defense on hybrid networks (Windows/Linux)',
   exp3_b2:'Threat simulation with Infection Monkey and Hydra — lateral movement and brute-force resilience evaluation',
-  exp3_b3:'Wazuh SIEM rule implementation and tuning, VirusTotal API integration, automated Slack alerting',
+  exp3_b3:'Wazuh SIEM rule tuning, VirusTotal API integration, automated Slack alerting',
   exp3_b4:'Continuous CTF practice: vulnerability analysis, privilege escalation and digital forensics',
   exp4_role:'Data Analyst',exp4_co:'Universidad Europea del Atlántico · Spain',
-  exp4_b1:'Created reports and dashboards in Google Data Studio for multiple departments',
-  exp4_b2:'Extracted and analyzed data from SQL databases',
-  exp4_b3:'Automated periodic reporting processes to improve operational efficiency',
-  exp5_role:'Security Operations Center (SOC) Analyst',exp5_co:'F2TC Cyber Security · Dominican Republic',
-  exp5_b1:'Real-time security alert monitoring using SIEM tools',
-  exp5_b2:'Investigation and triage of low and medium-level security incidents',
-  exp5_b3:'Escalation of critical threats to incident response teams',
+  exp4_b1:'Created dashboards in Google Data Studio',exp4_b2:'Extracted and analyzed data from SQL databases',exp4_b3:'Automated periodic reporting processes',
+  exp5_role:'SOC Analyst',exp5_co:'F2TC Cyber Security · Dominican Republic',
+  exp5_b1:'Real-time security alert monitoring using SIEM tools',exp5_b2:'Incident triage and investigation at L1 level',exp5_b3:'Escalation of critical threats to incident response teams',
   exp6_role:'Cybersecurity Program Internship (CICTE)',exp6_co:'Organization of American States (OAS) · USA',
-  exp6_b1:'Research on cybersecurity threats and trends in Latin America and the Caribbean',
-  exp6_b2:'Risk analysis and risk matrix development for regional projects',
-  exp6_b3:'Support in cybersecurity program implementation across Ibero-America',
-  exp6_b4:'Preparation of technical and executive cybersecurity reports',
-  exp7_role:'Higher Vocational Diploma — Information Security',exp7_co:'Instituto Tecnológico de las Américas · Dominican Republic',
-  exp7_desc:'Technical degree in information security. National CTF 3rd place (2019). Mujeres TICs Award (2017).',
+  exp6_b1:'Cybersecurity threat research for Latin America and the Caribbean',exp6_b2:'Risk analysis and risk matrix development for regional projects',exp6_b3:'Support in cybersecurity program implementation across Ibero-America',exp6_b4:'Technical and executive cybersecurity report writing',
+  exp7_role:'Higher Vocational Diploma — Information Security',exp7_co:'Instituto Tecnológico de las Américas · Dominican Republic',exp7_desc:'Technical degree in information security. National CTF 3rd place (2019). Mujeres TICs Award (2017).',
   s_labs_label:'Laboratories',s_labs_title:'Practical projects',
-  lab1_desc:'Lateral movement and malware propagation simulation on internal network. Attack vector and network segmentation gap analysis.',
-  lab2_desc:'Typosquatting domain detection with DNSTwist. Analysis of domain variations used in phishing campaigns.',
-  lab3_desc:'Controlled phishing campaign with Gophish via Ngrok. Open rate, click and credential harvesting metrics in sandbox.',
-  lab4_desc:'SSH attack analysis and ransomware behavior study in controlled environment. IOC extraction and incident response.',
-  lab_writeup:'writeup →',lab_soon:'Coming soon',lab_soon_desc:'New lab in development.',lab_soon_date:'In progress',
+  lab1_title:'Phishing Analysis: Amazon ES',lab1_desc:'Dissection of a real attack bypassing SPF/DKIM/DMARC. Homoglyph attack, Unicode evasion and victim tracking on urlscan.io.',
+  lab2_title:'Gophish + Ngrok Simulation',lab2_desc:'Controlled phishing campaign with Gophish via Ngrok tunnel. Open rate, click and credential harvesting metrics in sandbox.',
+  lab3_title:'EDR vs Antivirus — Lab Test',lab3_desc:'Same attack, three scenarios: AV only, EDR active, EDR only. Infection Monkey vs Windows 10 with Wazuh + Trend Micro Vision One. Antivirus failed. EDR stopped it before execution.',
+  lab4_title:'Ransomware Lab — SIEM vs Real Attack',lab4_desc:'Ransomware simulation with Infection Monkey. Wazuh detected C2 and alerted via Slack — but encryption continued. 1,734 events. VM crashed. Snapshot saved everything.',
+  lab5_title:'Next lab',lab5_desc:'Active Directory + lateral movement + SOAR integration. Under construction.',
+  lab_soon_date:'In progress',
   s_skills_label:'Skills',s_skills_title:'Technical stack',
   sk1:'SOC & Incident Response',sk2:'Threat Intelligence',sk3:'Analysis & Forensics',sk4:'Languages & Scripting',sk5:'Platforms',sk6:'Spoken languages',
   lang1:'Spanish — Native',lang2:'English — Bilingual (C1 Advanced)',lang3:'French — Basic',
@@ -748,10 +747,10 @@ en:{
   s_contact_label:'Contact',s_contact_title:"Let's talk",
   contact_headline:'Looking for a SOC analyst with real-world experience and international achievements?',
   contact_sub:'Available for SOC Analyst, Threat Intelligence or defensive cybersecurity roles. Open to Spain-based and remote positions.',
-  form_title:'Send me a message',form_name:'Name',form_company:'Company',form_email_label:'Your email',form_msg:'Message',form_send:'Send message →',form_success:'✓ Message sent — I\'ll get back to you shortly.',
+  form_title:'Send me a message',form_name:'Name',form_company:'Company',form_email_label:'Your email',form_msg:'Message',form_send:'Send message →',form_success:"✓ Message sent — I'll get back to you shortly.",
   footer_txt:'© 2026 · Lisa Marie Moreno · Hosted on GitHub Pages',
   hr_main:'👋 Are you from HR or looking for cybersecurity talent?',
-  hr_sub:'I\'m available for new opportunities — click to view my contact details directly.',
+  hr_sub:"I'm available for new opportunities — click to view my contact details.",
   hr_btn:'View contact →',hr_close:'Close',
   visitor_pre:"You're visitor number",visitor_suf:'on this portfolio',
 }
@@ -771,50 +770,29 @@ function setLang(l){
   updateVisitorBar();
 }
 
-// ── VISITOR COUNTER ────────────────────────────────────────────────────────────
-// Uses localStorage for instant display + countapi for persistence across devices
-// countapi.xyz is free and requires no signup
-let visitorN=null;
-
-async function initVisitor(){
-  // Increment only once per session
-  const sessionKey='lm_portfolio_visited';
+// ── VISITOR COUNTER — localStorage (sin dependencias externas) ─────────────────
+function initVisitor(){
+  const sessionKey='lm_visited_session';
+  const storageKey='lm_visit_count';
   const alreadyCounted=sessionStorage.getItem(sessionKey);
-
-  try{
-    let url;
-    if(!alreadyCounted){
-      url='https://api.countapi.xyz/hit/lisa-moreno-portfolio-2026/visits';
-      sessionStorage.setItem(sessionKey,'1');
-    } else {
-      url='https://api.countapi.xyz/get/lisa-moreno-portfolio-2026/visits';
-    }
-    const r=await fetch(url);
-    const d=await r.json();
-    visitorN=d.value;
-  } catch(e){
-    // If countapi is down, use localStorage as fallback
-    const local=parseInt(localStorage.getItem('lm_visits')||'0');
-    if(!alreadyCounted){
-      localStorage.setItem('lm_visits',local+1);
-      visitorN=local+1;
-      sessionStorage.setItem(sessionKey,'1');
-    } else {
-      visitorN=local;
-    }
+  let count=parseInt(localStorage.getItem(storageKey)||'0');
+  if(!alreadyCounted){
+    count+=1;
+    localStorage.setItem(storageKey,count);
+    sessionStorage.setItem(sessionKey,'1');
   }
-  updateVisitorBar();
+  updateVisitorBar(count);
 }
 
-function updateVisitorBar(){
+function updateVisitorBar(count){
   const el=document.getElementById('vbar-text');
-  if(visitorN===null){
+  if(!count){
     el.innerHTML='SOC Analyst Portfolio · <span class="count">Lisa Marie Moreno</span>';
     return;
   }
   const pre=T[lang].visitor_pre||'Eres la visita número';
   const suf=T[lang].visitor_suf||'de este portfolio';
-  el.innerHTML=pre+' <span class="count">'+visitorN.toLocaleString()+'</span> '+suf;
+  el.innerHTML=pre+' <span class="count">'+count.toLocaleString()+'</span> '+suf;
 }
 
 initVisitor();
@@ -832,55 +810,45 @@ function closeHR(){
   sessionStorage.setItem('hr_closed','1');
 }
 
-function showHRBanner(){
-  if(sessionStorage.getItem('hr_closed')) return;
-  document.getElementById('hr-banner').classList.add('show');
-}
+setTimeout(()=>{
+  if(!sessionStorage.getItem('hr_closed'))
+    document.getElementById('hr-banner').classList.add('show');
+},5000);
 
-// Show after 5 seconds
-setTimeout(showHRBanner,5000);
-
-// ── CONTACT FORM (Formspree) ───────────────────────────────────────────────────
+// ── CONTACT FORM ───────────────────────────────────────────────────────────────
 document.getElementById('contact-form').addEventListener('submit',async function(e){
   e.preventDefault();
   const btn=this.querySelector('.form-submit');
   btn.textContent='Enviando...';
   btn.disabled=true;
   try{
-    const resp=await fetch(this.action,{
-      method:'POST',
-      body:new FormData(this),
-      headers:{'Accept':'application/json'}
-    });
+    const resp=await fetch(this.action,{method:'POST',body:new FormData(this),headers:{'Accept':'application/json'}});
     if(resp.ok){
       this.style.display='none';
       const s=document.getElementById('form-success');
       s.style.display='block';
       s.textContent=T[lang].form_success;
     } else {
-      btn.textContent=T[lang].form_send;
-      btn.disabled=false;
-      alert('Error al enviar. Por favor usa el email directamente: lisamoreno.it@gmail.com');
+      btn.textContent=T[lang].form_send;btn.disabled=false;
+      alert('Error al enviar. Escríbeme a: lisamoreno.it@gmail.com');
     }
   } catch(err){
-    btn.textContent=T[lang].form_send;
-    btn.disabled=false;
+    btn.textContent=T[lang].form_send;btn.disabled=false;
     alert('Error de conexión. Escríbeme a: lisamoreno.it@gmail.com');
   }
 });
 
 // ── SCROLL ANIMATIONS ──────────────────────────────────────────────────────────
 const obs=new IntersectionObserver(es=>{
-  es.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+  es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
 },{threshold:0.06});
 document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
 
-// ── NAV TOP OFFSET ─────────────────────────────────────────────────────────────
+// ── NAV OFFSET ─────────────────────────────────────────────────────────────────
 const vbar=document.getElementById('visitor-bar');
 const navEl=document.querySelector('nav');
-function syncNav(){ navEl.style.top=vbar.offsetHeight+'px'; }
-syncNav();
-window.addEventListener('resize',syncNav);
+function syncNav(){navEl.style.top=vbar.offsetHeight+'px';}
+syncNav();window.addEventListener('resize',syncNav);
 </script>
 </body>
 </html>
